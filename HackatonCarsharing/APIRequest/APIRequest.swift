@@ -33,6 +33,8 @@ extension APIRequest {
     var headers: [String:String] { return [:] }
     var body: Any { return [:] }
     
+    var baseUrl: String { return AppDelegate.endpoint }
+    
     func getRequest() -> URLRequest {
         guard var url = URL(string: baseUrl) else {
             fatalError("Impossible to generate url from \(baseUrl)")

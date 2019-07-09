@@ -21,7 +21,9 @@ struct Trip {
     let startTime: String
     let stops: String?
 
-    init(id: Int, origin: String, destination: String, contact: String, name: String, email: String, totalSeats: Int, availableSeats: Int, startTime: String, stops: String?) {
+    init(id: Int = 0, origin: String, destination: String, contact: String,
+         name: String, email: String, totalSeats: Int,
+         availableSeats: Int, startTime: String, stops: String?) {
         self.id = id
         self.origin = origin
         self.destination = destination
