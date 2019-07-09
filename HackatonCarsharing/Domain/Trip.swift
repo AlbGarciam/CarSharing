@@ -15,17 +15,19 @@ struct Trip {
     let destination: String
     let contact: String
     let name: String
+    let email: String
     let totalSeats: Int
     let availableSeats: Int
     let startTime: String
     let stops: String?
 
-    init(id: Int, origin: String, destination: String, contact: String, name: String, totalSeats: Int, availableSeats: Int, startTime: String, stops: String?) {
+    init(id: Int, origin: String, destination: String, contact: String, name: String, email: String, totalSeats: Int, availableSeats: Int, startTime: String, stops: String?) {
         self.id = id
         self.origin = origin
         self.destination = destination
         self.contact = contact
         self.name = name
+        self.email = email
         self.totalSeats = totalSeats
         self.availableSeats = availableSeats
         self.startTime = startTime
@@ -41,6 +43,7 @@ extension Trip: Codable {
         case destination
         case contact
         case name
+        case email
         case totalSeats
         case availableSeats
         case startTime
@@ -54,13 +57,15 @@ extension Trip: Codable {
         let destination = try container.decode(String.self, forKey: .destination)
         let contact = try container.decode(String.self, forKey: .contact)
         let name = try container.decode(String.self, forKey: .name)
+        let email = try container.decode(String.self, forKey: .email)
         let totalSeats = try container.decode(Int.self, forKey: .totalSeats)
         let availableSeats = try container.decode(Int.self, forKey: .availableSeats)
         let startTime = try container.decode(String.self, forKey: .startTime)
         let stops = try container.decodeIfPresent(String.self, forKey: .stops)
         
         self.init(id: id, origin: origin, destination: destination, contact: contact,
-                  name: name, totalSeats: totalSeats, availableSeats: availableSeats, startTime: startTime, stops: stops)
+                  name: name, email: email, totalSeats: totalSeats, availableSeats: availableSeats,
+                  startTime: startTime, stops: stops)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -70,6 +75,7 @@ extension Trip: Codable {
         try container.encode(destination, forKey: .destination)
         try container.encode(contact, forKey: .contact)
         try container.encode(name, forKey: .name)
+        try container.encode(email, forKey: .email)
         try container.encode(totalSeats, forKey: .totalSeats)
         try container.encode(availableSeats, forKey: .availableSeats)
         try container.encode(startTime, forKey: .startTime)
