@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14861E92AD3209446E4CE1FB /* Pods_HackatonCarsharingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */; };
+		3E97777BF7E33A553D027B3E /* Pods_HackatonCarsharingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */; };
 		4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489C22D4A45100D3185F /* AppDelegate.swift */; };
 		4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489E22D4A45100D3185F /* ViewController.swift */; };
 		4E6E48A222D4A45100D3185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E48A022D4A45100D3185F /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		4E6E48A722D4A45200D3185F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E48A522D4A45200D3185F /* LaunchScreen.storyboard */; };
 		4E6E48B222D4A45200D3185F /* HackatonCarsharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48B122D4A45200D3185F /* HackatonCarsharingTests.swift */; };
 		4E6E48BD22D4A45200D3185F /* HackatonCarsharingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48BC22D4A45200D3185F /* HackatonCarsharingUITests.swift */; };
+		B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BC6F8DE65C3E6FAAE2D91B3 /* Pods-HackatonCarsharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.release.xcconfig"; sourceTree = "<group>"; };
+		23B2E58A45956FABCB82B52A /* Pods-HackatonCarsharingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4860335E0F6279A24ABF281C /* Pods-HackatonCarsharingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingTests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingTests/Pods-HackatonCarsharingTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E6E489922D4A45100D3185F /* HackatonCarsharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCarsharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6E489C22D4A45100D3185F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E6E489E22D4A45100D3185F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		4E6E48B822D4A45200D3185F /* HackatonCarsharingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackatonCarsharingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6E48BC22D4A45200D3185F /* HackatonCarsharingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackatonCarsharingUITests.swift; sourceTree = "<group>"; };
 		4E6E48BE22D4A45200D3185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
+		63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF46BC11395FF874F121540 /* Pods-HackatonCarsharingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingTests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingTests/Pods-HackatonCarsharingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F461CEF38C4C417ABFACB105 /* Pods-HackatonCarsharingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14861E92AD3209446E4CE1FB /* Pods_HackatonCarsharingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E97777BF7E33A553D027B3E /* Pods_HackatonCarsharingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25533FC5FA63380857BA59F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */,
+				515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */,
+				63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B5E8EB7E64D5CFF7F8D7067 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */,
+				1BC6F8DE65C3E6FAAE2D91B3 /* Pods-HackatonCarsharing.release.xcconfig */,
+				CAF46BC11395FF874F121540 /* Pods-HackatonCarsharingTests.debug.xcconfig */,
+				4860335E0F6279A24ABF281C /* Pods-HackatonCarsharingTests.release.xcconfig */,
+				F461CEF38C4C417ABFACB105 /* Pods-HackatonCarsharingUITests.debug.xcconfig */,
+				23B2E58A45956FABCB82B52A /* Pods-HackatonCarsharingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E6E489022D4A45100D3185F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				4E6E48B022D4A45200D3185F /* HackatonCarsharingTests */,
 				4E6E48BB22D4A45200D3185F /* HackatonCarsharingUITests */,
 				4E6E489A22D4A45100D3185F /* Products */,
+				3B5E8EB7E64D5CFF7F8D7067 /* Pods */,
+				25533FC5FA63380857BA59F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6E48C122D4A45200D3185F /* Build configuration list for PBXNativeTarget "HackatonCarsharing" */;
 			buildPhases = (
+				B537C82BE4292BE2BB1B9670 /* [CP] Check Pods Manifest.lock */,
 				4E6E489522D4A45100D3185F /* Sources */,
 				4E6E489622D4A45100D3185F /* Frameworks */,
 				4E6E489722D4A45100D3185F /* Resources */,
+				DC2F5EDB1E085C57DF21240F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6E48C422D4A45200D3185F /* Build configuration list for PBXNativeTarget "HackatonCarsharingTests" */;
 			buildPhases = (
+				BA421599EF1AFF986CCD19D9 /* [CP] Check Pods Manifest.lock */,
 				4E6E48A922D4A45200D3185F /* Sources */,
 				4E6E48AA22D4A45200D3185F /* Frameworks */,
 				4E6E48AB22D4A45200D3185F /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6E48C722D4A45200D3185F /* Build configuration list for PBXNativeTarget "HackatonCarsharingUITests" */;
 			buildPhases = (
+				43EC15D7E0CE1C6186532109 /* [CP] Check Pods Manifest.lock */,
 				4E6E48B422D4A45200D3185F /* Sources */,
 				4E6E48B522D4A45200D3185F /* Frameworks */,
 				4E6E48B622D4A45200D3185F /* Resources */,
@@ -250,6 +295,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43EC15D7E0CE1C6186532109 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackatonCarsharingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B537C82BE4292BE2BB1B9670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackatonCarsharing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA421599EF1AFF986CCD19D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackatonCarsharingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2F5EDB1E085C57DF21240F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E6E489522D4A45100D3185F /* Sources */ = {
@@ -430,6 +561,7 @@
 		};
 		4E6E48C222D4A45200D3185F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +580,7 @@
 		};
 		4E6E48C322D4A45200D3185F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC6F8DE65C3E6FAAE2D91B3 /* Pods-HackatonCarsharing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +599,7 @@
 		};
 		4E6E48C522D4A45200D3185F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF46BC11395FF874F121540 /* Pods-HackatonCarsharingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +621,7 @@
 		};
 		4E6E48C622D4A45200D3185F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4860335E0F6279A24ABF281C /* Pods-HackatonCarsharingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +643,7 @@
 		};
 		4E6E48C822D4A45200D3185F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F461CEF38C4C417ABFACB105 /* Pods-HackatonCarsharingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +664,7 @@
 		};
 		4E6E48C922D4A45200D3185F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B2E58A45956FABCB82B52A /* Pods-HackatonCarsharingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

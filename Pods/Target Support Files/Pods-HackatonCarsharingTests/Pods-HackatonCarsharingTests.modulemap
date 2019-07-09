@@ -1,0 +1,6 @@
+framework module Pods_HackatonCarsharingTests {
+  umbrella header "Pods-HackatonCarsharingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
