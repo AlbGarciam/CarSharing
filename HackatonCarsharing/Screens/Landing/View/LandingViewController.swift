@@ -9,6 +9,14 @@
 import UIKit
 
 class LandingViewController: UIViewController {
+    
+    init() {
+        super.init(nibName: nil, bundle: Bundle.init(for: type(of: self)))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
