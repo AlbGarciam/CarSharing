@@ -26,6 +26,10 @@
 		4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */; };
 		4ECADF5B22D4E40F005E8E89 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5A22D4E40F005E8E89 /* Assembler.swift */; };
 		4ECADF5D22D4E457005E8E89 /* Assembler+ProvideLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */; };
+		4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6122D4E58A005E8E89 /* CreateTicketViewController.swift */; };
+		4ECADF6422D4E58A005E8E89 /* CreateTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */; };
+		4ECADF6622D4E5CA005E8E89 /* CreateTicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */; };
+		4ECADF6822D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6722D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift */; };
 		B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsRequest.swift; sourceTree = "<group>"; };
 		4ECADF5A22D4E40F005E8E89 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+ProvideLanding.swift"; sourceTree = "<group>"; };
+		4ECADF6122D4E58A005E8E89 /* CreateTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketViewController.swift; sourceTree = "<group>"; };
+		4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTicketViewController.xib; sourceTree = "<group>"; };
+		4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketPresenter.swift; sourceTree = "<group>"; };
+		4ECADF6722D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+ProvideCreateTicket.swift"; sourceTree = "<group>"; };
 		515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
 		63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,7 @@
 		268457A622D4D1B900A6D393 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4ECADF5E22D4E54D005E8E89 /* CreateTrip */,
 				268457A022D4C7C600A6D393 /* Landing */,
 			);
 			path = Screens;
@@ -255,8 +264,35 @@
 			children = (
 				4ECADF5A22D4E40F005E8E89 /* Assembler.swift */,
 				4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */,
+				4ECADF6722D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		4ECADF5E22D4E54D005E8E89 /* CreateTrip */ = {
+			isa = PBXGroup;
+			children = (
+				4ECADF6022D4E565005E8E89 /* Presenter */,
+				4ECADF5F22D4E560005E8E89 /* View */,
+			);
+			path = CreateTrip;
+			sourceTree = "<group>";
+		};
+		4ECADF5F22D4E560005E8E89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ECADF6122D4E58A005E8E89 /* CreateTicketViewController.swift */,
+				4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4ECADF6022D4E565005E8E89 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6E48A722D4A45200D3185F /* LaunchScreen.storyboard in Resources */,
+				4ECADF6422D4E58A005E8E89 /* CreateTicketViewController.xib in Resources */,
 				4E6E48A422D4A45200D3185F /* Assets.xcassets in Resources */,
 				268457A422D4C86300A6D393 /* LandingViewController.xib in Resources */,
 				4E6E48A222D4A45100D3185F /* Main.storyboard in Resources */,
@@ -483,14 +520,17 @@
 			files = (
 				4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */,
 				4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */,
+				4ECADF6622D4E5CA005E8E89 /* CreateTicketPresenter.swift in Sources */,
 				4ECADF5B22D4E40F005E8E89 /* Assembler.swift in Sources */,
 				268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */,
+				4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */,
 				4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */,
 				4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */,
 				4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */,
 				4ECADF5D22D4E457005E8E89 /* Assembler+ProvideLanding.swift in Sources */,
 				4E6E48D022D4A59200D3185F /* APIRequest.swift in Sources */,
 				4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */,
+				4ECADF6822D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift in Sources */,
 				4E6E48CE22D4A59200D3185F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
