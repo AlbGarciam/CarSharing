@@ -10,6 +10,7 @@
 		14861E92AD3209446E4CE1FB /* Pods_HackatonCarsharingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */; };
 		268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457A122D4C86300A6D393 /* LandingViewController.swift */; };
 		268457A422D4C86300A6D393 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268457A222D4C86300A6D393 /* LandingViewController.xib */; };
+		268457A822D4D52800A6D393 /* LandingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457A722D4D52800A6D393 /* LandingButtonView.swift */; };
 		3E97777BF7E33A553D027B3E /* Pods_HackatonCarsharingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */; };
 		4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489C22D4A45100D3185F /* AppDelegate.swift */; };
 		4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489E22D4A45100D3185F /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		23B2E58A45956FABCB82B52A /* Pods-HackatonCarsharingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		268457A122D4C86300A6D393 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		268457A222D4C86300A6D393 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		268457A722D4D52800A6D393 /* LandingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButtonView.swift; sourceTree = "<group>"; };
 		35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4860335E0F6279A24ABF281C /* Pods-HackatonCarsharingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingTests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingTests/Pods-HackatonCarsharingTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E6E489922D4A45100D3185F /* HackatonCarsharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCarsharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 		268457A522D4CA4100A6D393 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				268457A922D4D6EB00A6D393 /* Custom */,
 				268457A122D4C86300A6D393 /* LandingViewController.swift */,
 				268457A222D4C86300A6D393 /* LandingViewController.xib */,
 			);
@@ -138,6 +141,14 @@
 				268457A022D4C7C600A6D393 /* Landing */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		268457A922D4D6EB00A6D393 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				268457A722D4D52800A6D393 /* LandingButtonView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		3B5E8EB7E64D5CFF7F8D7067 /* Pods */ = {
@@ -469,6 +480,7 @@
 			files = (
 				4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */,
 				4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */,
+				268457A822D4D52800A6D393 /* LandingButtonView.swift in Sources */,
 				268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */,
 				4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */,
 				4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */,
