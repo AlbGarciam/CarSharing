@@ -21,6 +21,7 @@
 		4E6E48D022D4A59200D3185F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48CD22D4A59200D3185F /* APIRequest.swift */; };
 		4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5022D4AA3B005E8E89 /* Trip.swift */; };
 		4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */; };
+		4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */; };
 		B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		4E6E48CD22D4A59200D3185F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		4ECADF5022D4AA3B005E8E89 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TripFormatter.swift"; sourceTree = "<group>"; };
+		4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsRequest.swift; sourceTree = "<group>"; };
 		515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
 		63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 		4E6E489B22D4A45100D3185F /* HackatonCarsharing */ = {
 			isa = PBXGroup;
 			children = (
+				4ECADF5522D4B42C005E8E89 /* Requests */,
 				4ECADF5222D4AC5C005E8E89 /* Extensions */,
 				4ECADF4F22D4AA24005E8E89 /* Domain */,
 				4E6E48CA22D4A59200D3185F /* APIRequest */,
@@ -202,6 +205,14 @@
 				4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4ECADF5522D4B42C005E8E89 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +439,7 @@
 				4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */,
 				4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */,
 				4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */,
+				4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */,
 				4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */,
 				4E6E48D022D4A59200D3185F /* APIRequest.swift in Sources */,
 				4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */,
