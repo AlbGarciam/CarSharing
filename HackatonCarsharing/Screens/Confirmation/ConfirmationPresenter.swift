@@ -44,7 +44,7 @@ class ConfirmationPresenter {
     }
     
     private func setUpDriverConfirmation() {
-        _imageName = ""
+        _imageName = "confirmation_success_driver"
         _titleText = "¡Genial!"
         _subtitleText = "Tu viaje acaba de ser publicado."
         _descriptionText = "Espera a que un compañero se ponga en contacto contigo a través de tu teléfono para concretar el viaje."
@@ -52,7 +52,7 @@ class ConfirmationPresenter {
     }
     
     private func setUpPassengerConfirmation() {
-        _imageName = ""
+        _imageName = "confirmation_success_passenger"
         _titleText = "¡Oh yeah!"
         _subtitleText = "Ya tienes tu plaza reservada."
         if let trip = tripInfo {
