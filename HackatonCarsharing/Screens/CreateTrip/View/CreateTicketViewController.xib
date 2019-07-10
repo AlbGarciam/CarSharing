@@ -121,7 +121,7 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAr-uu-XJT">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAr-uu-XJT" customClass="CustomButton" customModule="HackatonCarsharing" customModuleProvider="target">
                                     <rect key="frame" x="16" y="572" width="382" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="4Mp-ig-CYn"/>
