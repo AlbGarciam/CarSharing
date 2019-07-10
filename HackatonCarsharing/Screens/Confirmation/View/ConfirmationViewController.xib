@@ -19,6 +19,7 @@
                 <outlet property="subtitleLabel" destination="7Mj-aJ-0XH" id="jca-Wk-t8m"/>
                 <outlet property="titleLabel" destination="goU-0X-PZ4" id="rex-ec-4CO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cAi-xc-Fz7"/>
+                <outlet property="whatsappButton" destination="jCr-fe-kpU" id="R2i-ow-KJe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-Mw-Cte">
-                    <rect key="frame" x="18" y="444" width="378" height="195"/>
+                    <rect key="frame" x="18" y="444" width="378" height="259"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goU-0X-PZ4">
                             <rect key="frame" x="0.0" y="0.0" width="378" height="51.5"/>
@@ -55,6 +56,19 @@
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="didTappedOnActionButton:" destination="-1" eventType="touchUpInside" id="wRP-82-vpV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCr-fe-kpU">
+                            <rect key="frame" x="0.0" y="215" width="378" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="z54-wt-ZU7"/>
+                            </constraints>
+                            <state key="normal" title="Mándame un Whatsapp" image="whatsapp">
+                                <color key="titleColor" red="0.070588235294117646" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnChat:" destination="-1" eventType="touchUpInside" id="cB2-C6-Thz"/>
                             </connections>
                         </button>
                     </subviews>
@@ -96,5 +110,6 @@
     </objects>
     <resources>
         <image name="close" width="13.5" height="13.5"/>
+        <image name="whatsapp" width="40" height="40"/>
     </resources>
 </document>

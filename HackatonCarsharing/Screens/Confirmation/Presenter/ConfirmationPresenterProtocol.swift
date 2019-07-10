@@ -17,4 +17,6 @@ protocol ConfirmationPresenterProtocol : class {
     func didTappedOnActionButton()
     func clickToCallAction()
     func didTapOnClose()
+    func clickToChatAction()
+    func shouldHideChatButton() -> Bool
 }

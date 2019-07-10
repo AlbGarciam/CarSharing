@@ -20,6 +20,12 @@ class ConfirmationViewController: UIViewController {
     //MARK: MVP
     private var presenter: ConfirmationPresenterProtocol!
 
+    @IBOutlet weak var whatsappButton: UIButton! {
+        didSet {
+            whatsappButton.imageView?.contentMode = .scaleAspectFit
+            whatsappButton.isHidden = !presenter.shouldHideChatButton()
+        }
+    }
     //MARK: Initializers
     init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -102,6 +108,10 @@ class ConfirmationViewController: UIViewController {
         subtitleLabel.text = subtitleText
         descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: .vfBlack)
         actionButton.setTitle(buttonText, for: .normal)
+    }
+    
+    @IBAction func didTapOnChat(_ sender: Any) {
+        presenter.clickToChatAction()
     }
 }
 

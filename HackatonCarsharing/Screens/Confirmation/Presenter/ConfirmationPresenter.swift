@@ -85,6 +85,19 @@ class ConfirmationPresenter {
             }
         }
     }
+    
+    private func clickToChat() {
+        if let trip = tripInfo {
+            let text = "!Hola%20\(trip.name.capitalized)!%20Quiero%20compartir%20viaje%20contigo%20"
+            if let url = URL(string: "https://wa.me/34\(trip.contact)?text=\(text)"), UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(url)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+        }
+    }
 }
 
 extension ConfirmationPresenter : ConfirmationPresenterProtocol {
@@ -133,5 +146,13 @@ extension ConfirmationPresenter : ConfirmationPresenterProtocol {
     
     func clickToCallAction() {
         self.callToNumber()
+    }
+    
+    func clickToChatAction() {
+        self.clickToChat()
+    }
+    
+    func shouldHideChatButton() -> Bool {
+        return confirmationType == .passenger
     }
 }
