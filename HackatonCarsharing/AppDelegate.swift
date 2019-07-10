@@ -12,7 +12,7 @@ import IQKeyboardManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static let endpoint:String = ""
+    static let endpoint:String = "http://carsharingvf.herokuapp.com/api"
 
     var window: UIWindow?
 
