@@ -66,6 +66,6 @@ class LandingViewController: UIViewController {
     
     @IBAction func searchTripAction(_ sender: UIButton) {
         let controller = assembler.provideTripsList()
-        self.navigationController?.pushViewController(controller, animated: false)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

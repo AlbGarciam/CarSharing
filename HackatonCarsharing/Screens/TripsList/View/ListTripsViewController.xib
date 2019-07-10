@@ -21,19 +21,29 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyBgVideo" translatesAutoresizingMaskIntoConstraints="NO" id="tQv-de-pfV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7hL-Cg-wLV">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="7hL-Cg-wLV" secondAttribute="bottom" id="2Be-n5-DGe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7hL-Cg-wLV" secondAttribute="trailing" id="Rxb-yN-Cbf"/>
+                <constraint firstItem="tQv-de-pfV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6ab-yd-RXy"/>
+                <constraint firstAttribute="trailing" secondItem="7hL-Cg-wLV" secondAttribute="trailing" id="Rxb-yN-Cbf"/>
+                <constraint firstAttribute="bottom" secondItem="tQv-de-pfV" secondAttribute="bottom" id="Wyd-J3-W0u"/>
                 <constraint firstItem="7hL-Cg-wLV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kmI-5U-0pb"/>
+                <constraint firstAttribute="trailing" secondItem="tQv-de-pfV" secondAttribute="trailing" id="oK0-cI-Bua"/>
                 <constraint firstItem="7hL-Cg-wLV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pgM-wc-M72"/>
+                <constraint firstAttribute="top" secondItem="tQv-de-pfV" secondAttribute="top" id="tCI-B0-ZxR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="greyBgVideo" width="360" height="740"/>
+    </resources>
 </document>

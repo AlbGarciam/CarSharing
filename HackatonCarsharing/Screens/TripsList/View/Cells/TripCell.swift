@@ -11,13 +11,10 @@ import UIKit
 class TripCell: UITableViewCell {
     
     static let reuseId: String = "TripCell"
-    let grey = UIColor(red: 102, green: 102, blue: 102, alpha: 1)
-    let red = UIColor(red: 230, green: 0, blue: 0, alpha: 1)
-    let black = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-    
+        
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            titleLabel.textColor = red
+            titleLabel.textColor = .vfRed
             titleLabel.font = UIFont(name: "Helvetica-Bold", size: 16)
             titleLabel.textAlignment = .left
         }
@@ -25,7 +22,7 @@ class TripCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!{
         didSet{
-            dateLabel.textColor = grey
+            dateLabel.textColor = .vfGrey
             dateLabel.font = UIFont(name: "Helvetica", size: 16)
             dateLabel.textAlignment = .right
         }
@@ -33,20 +30,20 @@ class TripCell: UITableViewCell {
     
     @IBOutlet weak var separatorView: UIView!{
         didSet{
-            separatorView.backgroundColor = UIColor(red: 235, green: 235, blue: 235, alpha: 1)
+            separatorView.backgroundColor = .vfGrey
         }
     }
     
     @IBOutlet weak var originLabel: UILabel!{
         didSet{
-            originLabel.textColor = black
+            originLabel.textColor = .vfBlack
             originLabel.font = UIFont(name: "Helvetica-Bold", size: 16)
         }
     }
     
     @IBOutlet weak var stopsLabel: UILabel! {
         didSet{
-            stopsLabel.textColor = grey
+            stopsLabel.textColor = .vfGrey
             stopsLabel.font = UIFont(name: "Helvetica", size: 16)
             stopsLabel.isHidden = true
         }
@@ -68,7 +65,7 @@ class TripCell: UITableViewCell {
             button.setTitle("Reservar", for: .normal)
             button.setTitleColor(.white, for: .normal)
             button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
-            button.backgroundColor = .red
+            button.backgroundColor = .vfRed
             button.layer.cornerRadius = 6
             button.layer.masksToBounds = true
             button.addTarget(self, action: #selector(didRequestTrip(_:)), for: .touchUpInside)

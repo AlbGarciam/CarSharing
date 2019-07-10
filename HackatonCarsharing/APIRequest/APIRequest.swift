@@ -53,7 +53,9 @@ extension APIRequest {
         
         var request = URLRequest(url: finalURL)
         request.httpMethod = method.rawValue
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        if method == .POST {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        }
         request.allHTTPHeaderFields = headers
         
         return request

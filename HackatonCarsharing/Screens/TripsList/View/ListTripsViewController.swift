@@ -19,9 +19,9 @@ class ListTripsViewController: UIViewController {
 
     //MARK: Initializers
     init() {
-        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        super.init(nibName: nil, bundle: Bundle.init(for: type(of: self)))
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,6 +33,8 @@ class ListTripsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.getTripList()
+    self.navigationController?.isNavigationBarHidden = false
+        self.title = "Busco un viaje"
     }
     
     //MARK: IB Outlets
@@ -75,7 +77,7 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ListTripsViewController: ListTripsViewControllerProtocol {
     func reloadData() {
-
+        tableView.reloadData()
     }
 }
 

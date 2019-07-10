@@ -33,7 +33,7 @@ class TripsListPresenter {
                 self?.tripsInfo = model
                 self?.view?.reloadData()
             case .failure(let error):
-                break
+                break //TODO
             }
         }
     }
