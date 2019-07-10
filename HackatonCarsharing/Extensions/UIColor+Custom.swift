@@ -12,6 +12,7 @@ extension UIColor {
     
     static let vfRed = UIColor(red: 230, green: 0, blue: 0, alpha: 1)
     static let vfGrey = UIColor(hex: "#CCCCCCCC")
+    static let vfBlack = UIColor.init(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
     
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat

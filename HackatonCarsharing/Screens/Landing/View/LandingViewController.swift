@@ -65,5 +65,7 @@ class LandingViewController: UIViewController {
     }
     
     @IBAction func searchTripAction(_ sender: UIButton) {
+        let controller = assembler.provideConfirmation(confirmationType: .driver)
+        navigationController?.present(controller, animated: true, completion: nil)
     }
 }
