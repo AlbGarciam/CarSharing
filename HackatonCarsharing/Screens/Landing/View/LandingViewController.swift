@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LandingViewControllerProtocol: class {
+    func getViewController() -> LandingViewController
+}
+
 class LandingViewController: UIViewController {
 
     @IBOutlet weak var imgLogo: UIImageView!
@@ -38,6 +42,8 @@ class LandingViewController: UIViewController {
         }
     }
     
+    var presenter: LandingPresenterProtocol!
+    
     init() {
         super.init(nibName: nil, bundle: Bundle.init(for: type(of: self)))
     }
@@ -58,12 +64,23 @@ class LandingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func configure(presenter: LandingPresenterProtocol) {
+        self.presenter = presenter
+    }
 
     @IBAction func createTripAction(_ sender: UIButton) {
-        let nextController = assembler.provideCreateTicket()
-        navigationController?.pushViewController(nextController, animated: true)
+        presenter.createTripAction()
     }
     
     @IBAction func searchTripAction(_ sender: UIButton) {
+        presenter.searchTripAction()
+    }
+}
+
+extension LandingViewController: LandingViewControllerProtocol {
+    
+    func getViewController() -> LandingViewController {
+        return self
     }
 }
