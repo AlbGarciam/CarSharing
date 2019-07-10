@@ -31,7 +31,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-gf-zlf">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyBgVideo" translatesAutoresizingMaskIntoConstraints="NO" id="juI-7H-hJV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-gf-zlf">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ai-3W-AzR">
@@ -93,7 +96,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-Vc-S66" customClass="CustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-Vc-S66" customClass="DropdownCustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="180" width="382" height="44"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -102,13 +105,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Su-bx-xal">
                                             <rect key="frame" x="0.0" y="240" width="382" height="44"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-cS-DTi" customClass="CustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-cS-DTi" customClass="DropdownCustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdM-Y2-bme" customClass="CustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdM-Y2-bme" customClass="DropdownCustomTextField" customModule="HackatonCarsharing" customModuleProvider="target">
                                                     <rect key="frame" x="197" y="0.0" width="185" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -126,7 +129,6 @@
                                     <state key="normal" title="Button"/>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="TAr-uu-XJT" firstAttribute="top" secondItem="c4D-4P-H8v" secondAttribute="bottom" constant="24" id="Aa6-CN-pEc"/>
                                 <constraint firstItem="TAr-uu-XJT" firstAttribute="trailing" secondItem="c4D-4P-H8v" secondAttribute="trailing" id="HDr-yS-TOo"/>
@@ -153,12 +155,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="juI-7H-hJV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0yA-jk-I81"/>
+                <constraint firstItem="juI-7H-hJV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XEq-iI-Sei"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cN1-gf-zlf" secondAttribute="trailing" id="eNC-1X-eDu"/>
+                <constraint firstAttribute="trailing" secondItem="juI-7H-hJV" secondAttribute="trailing" id="lbv-2M-N5I"/>
                 <constraint firstAttribute="bottom" secondItem="cN1-gf-zlf" secondAttribute="bottom" id="ptn-Qr-j0Y"/>
                 <constraint firstItem="cN1-gf-zlf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qzv-KA-rjR"/>
                 <constraint firstItem="cN1-gf-zlf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tmE-Wu-zUX"/>
+                <constraint firstAttribute="bottom" secondItem="juI-7H-hJV" secondAttribute="bottom" id="x72-SP-pSZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="greyBgVideo" width="360" height="740"/>
+    </resources>
 </document>

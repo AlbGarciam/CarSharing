@@ -29,41 +29,52 @@ class CreateTicketViewController: UIViewController {
     @IBOutlet weak var contactNameTextField: CustomTextField! {
         didSet {
             contactNameTextField.setPlaceholder(text: "Nombre y apellido")
+            contactNameTextField.delegate = self
         }
     }
     @IBOutlet weak var corporateEmailTextField: CustomTextField!{
         didSet {
             corporateEmailTextField.setPlaceholder(text: "Email corporativo")
+            corporateEmailTextField.delegate = self
         }
     }
     @IBOutlet weak var contactNumberTextField: CustomTextField!{
         didSet {
             contactNumberTextField.setPlaceholder(text: "Teléfono")
+            contactNumberTextField.delegate = self
         }
     }
     @IBOutlet weak var startLocation: CustomTextField!{
         didSet {
             startLocation.setPlaceholder(text: "Punto de salida")
+            startLocation.delegate = self
         }
     }
     @IBOutlet weak var stopsTextField: CustomTextField!{
         didSet {
             stopsTextField.setPlaceholder(text: "Paradas intermedias")
+            stopsTextField.delegate = self
         }
     }
-    @IBOutlet weak var startDate: CustomTextField!{
+    @IBOutlet weak var startDate: DropdownCustomTextField!{
         didSet {
             startDate.setPlaceholder(text: "Fecha de salida")
+            startDate.delegate = self
+            startDate.dropShadow()
         }
     }
-    @IBOutlet weak var startTimeTextField: CustomTextField!{
+    @IBOutlet weak var startTimeTextField: DropdownCustomTextField!{
         didSet {
             startTimeTextField.setPlaceholder(text: "Hora de salida")
+            startTimeTextField.delegate = self
+            startTimeTextField.dropShadow()
         }
     }
-    @IBOutlet weak var seatsTextField: CustomTextField!{
+    @IBOutlet weak var seatsTextField: DropdownCustomTextField!{
         didSet {
             seatsTextField.setPlaceholder(text: "Nº de plazas")
+            seatsTextField.delegate = self
+            seatsTextField.dropShadow()
         }
     }
     

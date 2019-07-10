@@ -31,5 +31,18 @@ class CustomTextField: UITextField {
         let color = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1.0)
         attributedPlaceholder = NSAttributedString(string: text,
                                                    attributes: [NSAttributedString.Key.foregroundColor: color])
+        
     }
+    
+    func dropShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.masksToBounds = false
+        
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 4
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+    }
+
 }
