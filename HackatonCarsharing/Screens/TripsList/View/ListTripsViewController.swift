@@ -98,7 +98,11 @@ extension ListTripsViewController: ListTripsViewControllerProtocol {
     func navigateToConfirmation(with trip: Trip) {
         let confirmation = assembler.provideConfirmation(confirmationType: .passenger, tripInfo: trip)
         navigationController?.present(confirmation, animated: true, completion: nil)
-        
+    }
+    
+    func navigateToError() {
+        let error = assembler.provideConfirmation(confirmationType: .error)
+        navigationController?.present(error, animated: true, completion: nil)
     }
 }
 

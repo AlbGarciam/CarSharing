@@ -33,8 +33,8 @@ class TripsListPresenter {
             case .success(let model):
                 self?.tripsInfo = model
                 self?.view?.reloadData()
-            case .failure(let error):
-                break //TODO
+            case .failure(_):
+                self?.view?.navigateToError()
             }
         }
     }
@@ -46,8 +46,8 @@ class TripsListPresenter {
             case .success(let model):
                 self?.view?.reloadData()
                 self?.view?.navigateToConfirmation(with: model)
-            case .failure(let error):
-                break //TODO
+            case .failure(_):
+                self?.view?.navigateToError()
             }
         }
     }
