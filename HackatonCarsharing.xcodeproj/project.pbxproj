@@ -359,10 +359,8 @@
 		7DA36B1122D4D052005A1BCE /* Confirmation */ = {
 			isa = PBXGroup;
 			children = (
-				7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */,
-				7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */,
-				7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */,
-				7DA36B1822D5349D005A1BCE /* ConfirmationPresenterProtocol.swift */,
+				7DA36B3422D60673005A1BCE /* View */,
+				7DA36B3322D60664005A1BCE /* Presenter */,
 			);
 			path = Confirmation;
 			sourceTree = "<group>";
@@ -381,6 +379,24 @@
 				7DA36B1D22D540CA005A1BCE /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA36B3322D60664005A1BCE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */,
+				7DA36B1822D5349D005A1BCE /* ConfirmationPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7DA36B3422D60673005A1BCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */,
+				7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
