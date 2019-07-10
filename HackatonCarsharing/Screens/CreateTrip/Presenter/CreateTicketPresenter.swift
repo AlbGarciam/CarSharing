@@ -11,6 +11,7 @@ import Foundation
 protocol CreateTicketPresenterProtocol {
     func inputValuesUpdated()
     func viewIsReady()
+    func continueRequested()
 }
 
 class CreateTicketPresenter {
@@ -59,5 +60,18 @@ extension CreateTicketPresenter: CreateTicketPresenterProtocol {
     
     func viewIsReady() {
         view?.isContinueEnabled = fetchTripModel() != nil
+    }
+    
+    func continueRequested() {
+        guard let trip = fetchTripModel() else { return }
+        
+        CreateTripsRequest(with: trip)?.makeRequest { (result) in
+            switch result{
+            case .success(let trip):
+                NSLog("Success")
+            case .failure(_):
+                NSLog("Failure")
+            }
+        }
     }
 }

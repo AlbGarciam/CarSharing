@@ -98,6 +98,7 @@ class CreateTicketViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton! {
         didSet {
             continueButton.setTitle("Publicar viaje", for: .normal)
+            continueButton.addTarget(self, action: #selector(continueButtonTapped(_:)), for: .touchUpInside)
         }
     }
     let picker = UIDatePicker()
@@ -168,6 +169,10 @@ class CreateTicketViewController: UIViewController {
     
     @objc private func textFieldDidChanged(_ sender: UITextField) {
         presenter.inputValuesUpdated()
+    }
+    
+    @objc private func continueButtonTapped(_ sender: UIButton) {
+        presenter.continueRequested()
     }
     
 }
