@@ -11,40 +11,41 @@ import UIKit
 class TripCell: UITableViewCell {
     
     static let reuseId: String = "TripCell"
-        
+    
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
             titleLabel.textColor = .vfRed
-            titleLabel.font = UIFont(name: "Helvetica-Bold", size: 16)
+            titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
             titleLabel.textAlignment = .left
         }
     }
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dateLabel: UILabel!{
         didSet{
-            dateLabel.textColor = .vfGrey
-            dateLabel.font = UIFont(name: "Helvetica", size: 16)
+            dateLabel.textColor = .vfGrey2
+            dateLabel.font = UIFont(name: "HelveticaNeue", size: 14)
             dateLabel.textAlignment = .right
         }
     }
     
     @IBOutlet weak var separatorView: UIView!{
         didSet{
-            separatorView.backgroundColor = .vfGrey
+            separatorView.backgroundColor = .vfGrey2
         }
     }
     
     @IBOutlet weak var originLabel: UILabel!{
         didSet{
             originLabel.textColor = .vfBlack
-            originLabel.font = UIFont(name: "Helvetica-Bold", size: 16)
+            originLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
         }
     }
     
     @IBOutlet weak var stopsLabel: UILabel! {
         didSet{
-            stopsLabel.textColor = .vfGrey
-            stopsLabel.font = UIFont(name: "Helvetica", size: 16)
+            stopsLabel.textColor = .vfGrey2
+            stopsLabel.font = UIFont(name: "HelveticaNeue", size: 14)
             stopsLabel.isHidden = true
         }
     }
@@ -53,27 +54,36 @@ class TripCell: UITableViewCell {
     
     func configureAdditionalInfo(time: String, seats: Int) {
         if infoTripStackView.subviews.count == 0 {
-            let time = AttributeView()
-            time.attributeTitle.text = "Hora:"
-            time.attributeValue.text = "\(time)"
-            infoTripStackView.addArrangedSubview(time)
-            let seats = AttributeView()
-            seats.attributeTitle.text = "Plazas:"
-            seats.attributeValue.text = "\(seats)"
-            infoTripStackView.addArrangedSubview(seats)
+            let timeLabel = AttributeView()
+            timeLabel.attributeTitle.text = "Hora:"
+            timeLabel.attributeValue.text = "\(time)"
+            infoTripStackView.addArrangedSubview(timeLabel)
+            let seatsLabel = AttributeView()
+            seatsLabel.attributeTitle.text = "Plazas:"
+            seatsLabel.attributeValue.text = "\(seats)"
+            infoTripStackView.addArrangedSubview(seatsLabel)
             let button = UIButton()
             button.setTitle("Reservar", for: .normal)
             button.setTitleColor(.white, for: .normal)
-            button.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
+            button.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
             button.backgroundColor = .vfRed
             button.layer.cornerRadius = 6
             button.layer.masksToBounds = true
             button.addTarget(self, action: #selector(didRequestTrip(_:)), for: .touchUpInside)
             infoTripStackView.addArrangedSubview(button)
+            layoutIfNeeded()
         }
     }
     
     @objc func didRequestTrip(_ sender: UIButton) {
         
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+        containerView.backgroundColor = .white
+        containerView.layer.cornerRadius = 6
+        containerView.layer.masksToBounds = true
     }
 }

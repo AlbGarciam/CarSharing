@@ -51,6 +51,7 @@
 		7DA36B2E22D5DCA6005A1BCE /* AttributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B2D22D5DCA6005A1BCE /* AttributeView.swift */; };
 		7DA36B3022D5DFCC005A1BCE /* TripsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B2F22D5DFCC005A1BCE /* TripsListPresenter.swift */; };
 		7DA36B3222D5FE7F005A1BCE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B3122D5FE7F005A1BCE /* Trips.swift */; };
+		7DA36B3822D61DFB005A1BCE /* RoundedShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B3722D61DFB005A1BCE /* RoundedShadowedView.swift */; };
 		B9939BEB3BD73DFD6C99FB88 /* Pods_HackatonCarsharingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E448E6D0080DD8633FC4BA99 /* Pods_HackatonCarsharingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		7DA36B2D22D5DCA6005A1BCE /* AttributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeView.swift; sourceTree = "<group>"; };
 		7DA36B2F22D5DFCC005A1BCE /* TripsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListPresenter.swift; sourceTree = "<group>"; };
 		7DA36B3122D5FE7F005A1BCE /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		7DA36B3722D61DFB005A1BCE /* RoundedShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowedView.swift; sourceTree = "<group>"; };
 		94C55E1BE4C3FFA90A860BBD /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
 		B2D3826343C312942E81E2DE /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C976651FB8E62CE7B5DD12CE /* Pods-HackatonCarsharingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				4EC2F90322D5E72B00128222 /* DropdownCustomTextField.swift */,
 				4EC2F90122D5D31C00128222 /* CustomTextField.swift */,
 				268457AC22D5F5C200A6D393 /* CustomButton.swift */,
+				7DA36B3722D61DFB005A1BCE /* RoundedShadowedView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				7DA36B2A22D5D961005A1BCE /* TripCell.swift in Sources */,
 				4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */,
 				4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */,
+				7DA36B3822D61DFB005A1BCE /* RoundedShadowedView.swift in Sources */,
 				4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */,
 				7DA36B3022D5DFCC005A1BCE /* TripsListPresenter.swift in Sources */,
 				7DA36B3222D5FE7F005A1BCE /* Trips.swift in Sources */,

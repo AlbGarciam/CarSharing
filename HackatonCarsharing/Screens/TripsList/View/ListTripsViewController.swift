@@ -51,6 +51,15 @@ class ListTripsViewController: UIViewController {
             tableView.register(cell, forCellReuseIdentifier: TripCell.reuseId)
         }
     }
+    
+    func dropShadow() {
+        tableView.layer.masksToBounds = false
+        tableView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        tableView.layer.shadowOpacity = 1
+        tableView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        tableView.layer.shadowRadius = 4
+        tableView.layer.shouldRasterize = true
+    }
 }
 
 extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,13 +72,16 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         if let cell = cell as? TripCell, let model = presenter.model(for: indexPath.row) {
             cell.titleLabel.text = model.name
-            cell.dateLabel.text = model.startTime
+            let date = DateFormatter.dateFormatter.date(from: model.startTime)
+            let tripDate = DateFormatter.tripDate.string(from: date!)
+            let tripTime = DateFormatter.tripTime.string(from: date!)
+            cell.dateLabel.text = tripDate
             cell.originLabel.text = model.origin
             if let stop = model.stops {
                 cell.stopsLabel.isHidden = false
                 cell.stopsLabel.text = stop
             }
-            cell.configureAdditionalInfo(time: model.startTime, seats: model.availableSeats)
+            cell.configureAdditionalInfo(time: tripTime, seats: model.availableSeats)
         }
         return cell
     }

@@ -10,9 +10,6 @@ import UIKit
 
 class AttributeView: UIView {
     
-    let grey = UIColor(red: 102, green: 102, blue: 102, alpha: 1)
-    let black = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-    
     lazy var attributeTitle: UILabel = {
         let attributeTitle = UILabel()
         attributeTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -46,16 +43,15 @@ class AttributeView: UIView {
     
     private func setAutoLayout() {
         attributeTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2).isActive = true
-        attributeTitle.topAnchor.constraint(equalTo: topAnchor, constant: 2).isActive = true
-        attributeValue.leadingAnchor.constraint(equalTo: attributeTitle.trailingAnchor).isActive = true
-        attributeValue.topAnchor.constraint(equalTo: attributeTitle.topAnchor).isActive = true
+        attributeTitle.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        attributeValue.leadingAnchor.constraint(equalTo: attributeTitle.trailingAnchor, constant: 2).isActive = true
+        attributeValue.centerYAnchor.constraint(equalTo: attributeTitle.centerYAnchor).isActive = true
     }
     
     private func setStyle() {
-        attributeTitle.font = UIFont(name: "Helvetica", size: 16)
-        attributeTitle.textColor = grey
-        attributeValue.font = UIFont(name: "Helvetica-Bold", size: 16)
-        attributeValue.textColor = black
+        attributeTitle.font = UIFont(name: "HelveticaNeue", size: 14)
+        attributeTitle.textColor = .vfGrey2
+        attributeValue.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        attributeValue.textColor = .vfBlack
     }
-
 }
