@@ -20,6 +20,7 @@ class LandingViewController: UIViewController {
         didSet {
             lblTitle.text = "Comparte coche para llegar cada mañana a Vodafone Plaza "
             lblTitle.numberOfLines = 0
+            lblTitle.textColor = .vfBlack
             lblTitle.sizeToFit()
         }
     }
