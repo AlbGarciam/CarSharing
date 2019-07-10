@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DEB187335ECC4B310FBDD9A459C2E72"
-               BuildableName = "Pods_HackatonCarsharingTests.framework"
-               BlueprintName = "Pods-HackatonCarsharingTests"
+               BlueprintIdentifier = "FBBC51E330606081D1C2BE5E38DE5943"
+               BuildableName = "Pods_HackatonCarsharingUITests.framework"
+               BlueprintName = "Pods-HackatonCarsharingUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DEB187335ECC4B310FBDD9A459C2E72"
-            BuildableName = "Pods_HackatonCarsharingTests.framework"
-            BlueprintName = "Pods-HackatonCarsharingTests"
+            BlueprintIdentifier = "FBBC51E330606081D1C2BE5E38DE5943"
+            BuildableName = "Pods_HackatonCarsharingUITests.framework"
+            BlueprintName = "Pods-HackatonCarsharingUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let landingVC = LandingViewController(nibName: "LandingViewController", bundle: nil)
+        let landingVC = assembler.provideLanding()
         let rootViewController = UINavigationController(rootViewController: landingVC)
         window?.rootViewController = rootViewController
         

@@ -26,7 +26,7 @@ class LandingButtonView: UIButton {
         self.semanticContentAttribute = .forceLeftToRight
         self.contentHorizontalAlignment = .left
         self.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: self.frame.width - 60)
-        self.titleEdgeInsets = UIEdgeInsets(top: 20, left: 60, bottom: 20, right: 20)
+        self.titleEdgeInsets = UIEdgeInsets(top: 20, left: -(self.frame.width - 20), bottom: 20, right: 20)
         
         self.layer.borderColor = UIColor.gray.cgColor
         self.layer.borderWidth = 1
