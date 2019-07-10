@@ -30,7 +30,7 @@ protocol APIRequest {
 
 extension APIRequest {
     var parameters: [String:String] { return [:] }
-    var headers: [String:String] { return [:] }
+    var headers: [String:String] { return ["Content-Type":"application/json"] }
     var body: Any { return [:] }
     
     var baseUrl: String { return AppDelegate.endpoint }

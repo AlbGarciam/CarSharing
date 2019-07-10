@@ -12,9 +12,10 @@ import IQKeyboardManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static let endpoint:String = ""
+    static let endpoint:String = "http://carsharingvf.herokuapp.com/api"
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -25,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let landingVC = assembler.provideLanding()
-        let rootViewController = UINavigationController(rootViewController: landingVC)
-        rootViewController.appearance()
-        window?.rootViewController = rootViewController
+        navigationController = UINavigationController(rootViewController: landingVC)
+        
+        navigationController?.appearance()
+        window?.rootViewController = navigationController
         
         return true
     }

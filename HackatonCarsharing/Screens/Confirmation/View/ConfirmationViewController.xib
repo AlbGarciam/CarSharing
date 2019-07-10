@@ -47,7 +47,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-es-ufM">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-es-ufM" customClass="CustomButton" customModule="HackatonCarsharing" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="151" width="378" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="yOP-kU-0Vm"/>

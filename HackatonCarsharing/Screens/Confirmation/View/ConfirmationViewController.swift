@@ -11,6 +11,7 @@ import UIKit
 protocol ConfirmationViewControllerProtocol: class {
     func navigationForDriver()
     func navigationForPassenger()
+    func navigationForError()
 }
 
 class ConfirmationViewController: UIViewController {
@@ -32,9 +33,6 @@ class ConfirmationViewController: UIViewController {
     }
     
     //MARK: Properties
-    private let red = UIColor.init(red: 244, green: 0, blue: 0, alpha: 1)
-    private let black = UIColor.init(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-    
     private var imageName: String = ""
     private var titleText: String = ""
     private var subtitleText: String = ""
@@ -53,33 +51,25 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
             titleLabel.font = UIFont(name: "Helvetica", size: 44)
-            titleLabel.textColor = black
+            titleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var subtitleLabel: UILabel!{
         didSet{
             subtitleLabel.font = UIFont(name: "Helvetica-Bold", size: 18)
-            subtitleLabel.textColor = black
+            subtitleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var descriptionLabel: UILabel!{
         didSet{
             descriptionLabel.font = UIFont(name: "Helvetica", size: 16)
-            descriptionLabel.textColor = black
+            descriptionLabel.textColor = .vfBlack
         }
     }
     
-    @IBOutlet weak var actionButton: UIButton!{
-        didSet{
-            actionButton.setTitleColor(.white, for: .normal)
-            actionButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
-            actionButton.backgroundColor = red
-            actionButton.layer.cornerRadius = 6
-            actionButton.layer.masksToBounds = true
-        }
-    }
+    @IBOutlet weak var actionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,19 +99,20 @@ class ConfirmationViewController: UIViewController {
         imageView.image = UIImage(named: imageName)
         titleLabel.text = titleText
         subtitleLabel.text = subtitleText
-        descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: black)
+        descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: .vfBlack)
         actionButton.setTitle(buttonText, for: .normal)
     }
     
     private func close(completion: (()->Void)?  = nil) {
-        self.dismiss(animated: false, completion: completion)
+        self.dismiss(animated: true, completion: completion)
     }
 }
 
 extension ConfirmationViewController: ConfirmationViewControllerProtocol {
     func navigationForDriver() {
+        let navigationController = (UIApplication.shared.delegate as? AppDelegate)?.navigationController
         close {
-            self.navigationController?.popToRootViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
@@ -129,5 +120,9 @@ extension ConfirmationViewController: ConfirmationViewControllerProtocol {
         close {
             self.presenter.clickToCallAction()
         }
+    }
+    
+    func navigationForError() {
+        close()
     }
 }
