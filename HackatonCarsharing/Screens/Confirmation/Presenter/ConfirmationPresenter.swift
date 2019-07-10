@@ -12,6 +12,7 @@ import UIKit
 enum ConfirmationType {
     case driver
     case passenger
+    case error
 }
 
 class ConfirmationPresenter {
@@ -40,6 +41,8 @@ class ConfirmationPresenter {
             setUpDriverConfirmation()
         case .passenger:
            setUpPassengerConfirmation()
+        case .error:
+            setUpError()
         }
     }
     
@@ -59,6 +62,14 @@ class ConfirmationPresenter {
             _descriptionText = "Acabas de reservar plaza en el coche de <b>\(trip.name.capitalized)</b> para mañana a las \(trip.startTime) h en \(trip.origin)."
         }
         _buttonText = "Contacta con el conductor"
+    }
+    
+    private func setUpError() {
+        _imageName = "ko_image"
+        _titleText = "¡Ups!"
+        _subtitleText = "Parece que algo ha salido mal."
+        _descriptionText = ""
+        _buttonText = "Volver a intentar"
     }
     
     private func callToNumber() {
@@ -101,6 +112,19 @@ extension ConfirmationPresenter : ConfirmationPresenterProtocol {
             view?.navigationForDriver()
         case .passenger:
             view?.navigationForPassenger()
+        case .error:
+            view?.navigationForError()
+        }
+    }
+    
+    func didTapOnClose() {
+        switch confirmationType {
+        case .driver:
+            view?.navigationForDriver()
+        case .passenger:
+            view?.close(completion: nil)
+        case .error:
+            view?.close(completion: nil)
         }
     }
     

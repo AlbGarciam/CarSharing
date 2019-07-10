@@ -11,6 +11,8 @@ import UIKit
 protocol ConfirmationViewControllerProtocol: class {
     func navigationForDriver()
     func navigationForPassenger()
+    func navigationForError()
+    func close(completion: (()->Void)?)
 }
 
 class ConfirmationViewController: UIViewController {
@@ -49,21 +51,21 @@ class ConfirmationViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            titleLabel.font = UIFont(name: "Helvetica", size: 44)
+            titleLabel.font = UIFont(name: "HelveticaNeue", size: 44)
             titleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var subtitleLabel: UILabel!{
         didSet{
-            subtitleLabel.font = UIFont(name: "Helvetica-Bold", size: 18)
+            subtitleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
             subtitleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var descriptionLabel: UILabel!{
         didSet{
-            descriptionLabel.font = UIFont(name: "Helvetica", size: 16)
+            descriptionLabel.font = UIFont(name: "HelveticaNeue-Light", size: 16)
             descriptionLabel.textColor = .vfBlack
         }
     }
@@ -82,7 +84,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     @IBAction func didTappedOnCloseButton(_ sender: UIButton) {
-        close()
+        presenter.didTapOnClose()
     }
     
     //MARK: Functions
@@ -101,16 +103,17 @@ class ConfirmationViewController: UIViewController {
         descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: .vfBlack)
         actionButton.setTitle(buttonText, for: .normal)
     }
-    
-    private func close(completion: (()->Void)?  = nil) {
-        self.dismiss(animated: false, completion: completion)
-    }
 }
 
 extension ConfirmationViewController: ConfirmationViewControllerProtocol {
+    func close(completion: (()->Void)?  = nil) {
+        self.dismiss(animated: true, completion: completion)
+    }
+    
     func navigationForDriver() {
+        let navigationController = (UIApplication.shared.delegate as? AppDelegate)?.navigationController
         close {
-            self.navigationController?.popToRootViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
@@ -118,5 +121,9 @@ extension ConfirmationViewController: ConfirmationViewControllerProtocol {
         close {
             self.presenter.clickToCallAction()
         }
+    }
+    
+    func navigationForError() {
+        close()
     }
 }

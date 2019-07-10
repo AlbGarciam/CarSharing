@@ -64,14 +64,15 @@ extension CreateTicketPresenter: CreateTicketPresenterProtocol {
     
     func continueRequested() {
         guard let trip = fetchTripModel() else { return }
-        
-        CreateTripsRequest(with: trip)?.makeRequest { (result) in
+        view?.isLoading(true)
+        CreateTripsRequest(with: trip)?.makeRequest {[weak self] (result) in
             switch result{
-            case .success(let trip):
-                NSLog("Success")
+            case .success(_):
+                self?.view?.navigateToConfirmation()
             case .failure(_):
-                NSLog("Failure")
+                self?.view?.navigateToError()
             }
+            self?.view?.isLoading(false)
         }
     }
 }

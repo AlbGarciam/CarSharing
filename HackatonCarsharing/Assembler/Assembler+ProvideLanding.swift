@@ -12,6 +12,8 @@ extension Assembler {
     func provideLanding() -> UIViewController {
         let controller = LandingViewController()
         // Initiate presenter and configure MVP
+        let presenter = LandingPresenter(view: controller)
+        controller.configure(presenter: presenter)
         return controller
     }
 }

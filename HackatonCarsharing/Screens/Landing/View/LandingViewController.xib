@@ -28,7 +28,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyBgVideo" translatesAutoresizingMaskIntoConstraints="NO" id="Jqq-BX-p1J">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-jw-bfY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-jw-bfY">
                     <rect key="frame" x="137.5" y="60" width="139" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="139" id="LFD-l5-92U"/>
@@ -36,20 +36,20 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8g-mS-nlc">
-                    <rect key="frame" x="16" y="122" width="382" height="33.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <rect key="frame" x="16" y="122" width="382" height="28.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="WME-h3-0eM">
-                    <rect key="frame" x="68" y="195.5" width="278" height="214"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redCar" translatesAutoresizingMaskIntoConstraints="NO" id="WME-h3-0eM">
+                    <rect key="frame" x="68" y="190.5" width="278" height="214"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="214" id="4wZ-Hj-GKk"/>
                         <constraint firstAttribute="width" constant="278" id="wd9-Yg-jqI"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XjZ-6s-h79">
-                    <rect key="frame" x="16" y="445.5" width="382" height="160"/>
+                    <rect key="frame" x="16" y="440.5" width="382" height="160"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-pN-2s5" customClass="LandingButtonView" customModule="HackatonCarsharing" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
@@ -57,7 +57,9 @@
                                 <constraint firstAttribute="height" constant="70" id="lBd-HS-ECP"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                            <state key="normal" title="Button" image="marker"/>
+                            <state key="normal" title="Button" image="marker">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="searchTripAction:" destination="-1" eventType="touchUpInside" id="on6-i7-sl5"/>
                             </connections>
@@ -68,7 +70,9 @@
                                 <constraint firstAttribute="height" constant="70" id="nx9-ow-hHx"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                            <state key="normal" title="Button" image="marker"/>
+                            <state key="normal" title="Button" image="speedCar">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="createTripAction:" destination="-1" eventType="touchUpInside" id="ity-PL-DnP"/>
                             </connections>
@@ -105,6 +109,9 @@
     </objects>
     <resources>
         <image name="greyBgVideo" width="360" height="740"/>
-        <image name="marker" width="445" height="720"/>
+        <image name="logo" width="139" height="30"/>
+        <image name="marker" width="34" height="34"/>
+        <image name="redCar" width="280" height="214"/>
+        <image name="speedCar" width="42" height="20"/>
     </resources>
 </document>

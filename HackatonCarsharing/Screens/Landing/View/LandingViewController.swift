@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LandingViewControllerProtocol: class {
+    func getViewController() -> LandingViewController
+}
+
 class LandingViewController: UIViewController {
 
     @IBOutlet weak var imgLogo: UIImageView!
@@ -16,6 +20,7 @@ class LandingViewController: UIViewController {
         didSet {
             lblTitle.text = "Comparte coche para llegar cada mañana a Vodafone Plaza "
             lblTitle.numberOfLines = 0
+            lblTitle.textColor = .vfBlack
             lblTitle.sizeToFit()
         }
     }
@@ -26,17 +31,19 @@ class LandingViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var btnSearchTrip: UIButton! {
+    @IBOutlet weak var btnSearchTrip: LandingButtonView! {
         didSet {
-            btnSearchTrip.setTitle("Busco un viaje", for: .normal)
+            btnSearchTrip.customLabel.text = "Busco un viaje"
         }
     }
     
-    @IBOutlet weak var btnCreateTrip: UIButton! {
+    @IBOutlet weak var btnCreateTrip: LandingButtonView! {
         didSet {
-            btnCreateTrip.setTitle("Compartir mi coche", for: .normal)
+            btnCreateTrip.customLabel.text = "Compartir mi coche"
         }
     }
+    
+    var presenter: LandingPresenterProtocol!
     
     init() {
         super.init(nibName: nil, bundle: Bundle.init(for: type(of: self)))
@@ -58,14 +65,23 @@ class LandingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func configure(presenter: LandingPresenterProtocol) {
+        self.presenter = presenter
+    }
 
     @IBAction func createTripAction(_ sender: UIButton) {
-        let nextController = assembler.provideCreateTicket()
-        navigationController?.pushViewController(nextController, animated: true)
+        presenter.createTripAction()
     }
     
     @IBAction func searchTripAction(_ sender: UIButton) {
-        let controller = assembler.provideTripsList()
-        navigationController?.pushViewController(controller, animated: true)
+        presenter.searchTripAction()
+    }
+}
+
+extension LandingViewController: LandingViewControllerProtocol {
+    
+    func getViewController() -> LandingViewController {
+        return self
     }
 }

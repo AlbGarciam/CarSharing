@@ -30,20 +30,20 @@
                     <rect key="frame" x="18" y="444" width="378" height="195"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goU-0X-PZ4">
-                            <rect key="frame" x="0.0" y="0.0" width="378" height="51"/>
-                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="378" height="51.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mj-aJ-0XH">
-                            <rect key="frame" x="0.0" y="71" width="378" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <rect key="frame" x="0.0" y="71.5" width="378" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8r-tt-KmH">
-                            <rect key="frame" x="0.0" y="112.5" width="378" height="18.5"/>
-                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                            <rect key="frame" x="0.0" y="112" width="378" height="19"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
