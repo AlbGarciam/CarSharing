@@ -13,6 +13,7 @@ protocol TripsListPresenterProtocol: class {
     func numberOfItems() -> Int
     func model(for row: Int) -> Trip?
     func getTripList()
+    func tripRequested(id: String)
 }
 
 class TripsListPresenter {
@@ -37,11 +38,28 @@ class TripsListPresenter {
             }
         }
     }
+    
+    private func requestTripReservation(id: String) {
+        let bookRequest = BookTripRequest(with: id)
+        bookRequest?.makeRequest { [weak self] result in
+            switch result {
+            case .success(let model):
+                self?.view?.reloadData()
+                self?.view?.navigateToConfirmation(with: model)
+            case .failure(let error):
+                break //TODO
+            }
+        }
+    }
 }
 
 extension TripsListPresenter: TripsListPresenterProtocol {
     func getTripList() {
         requestTripsInfo()
+    }
+    
+    func tripRequested(id: String){
+        requestTripReservation(id: id)
     }
     
     func numberOfItems() -> Int {
@@ -52,3 +70,4 @@ extension TripsListPresenter: TripsListPresenterProtocol {
         return tripsInfo?.trips?[row]
     }
 }
+

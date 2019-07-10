@@ -10,6 +10,7 @@ import UIKit
 
 protocol ListTripsViewControllerProtocol: class {
     func reloadData()
+    func navigateToConfirmation(with trip: Trip)
 }
 
 class ListTripsViewController: UIViewController {
@@ -71,6 +72,7 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TripCell.reuseId, for: indexPath)
         cell.selectionStyle = .none
         if let cell = cell as? TripCell, let model = presenter.model(for: indexPath.row) {
+            cell.tripId = model.id
             cell.titleLabel.text = model.name
             let date = DateFormatter.dateFormatter.date(from: model.startTime)
             let tripDate = DateFormatter.tripDate.string(from: date!)
@@ -82,6 +84,7 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.stopsLabel.text = stop
             }
             cell.configureAdditionalInfo(time: tripTime, seats: model.availableSeats)
+            cell.delegate = self
         }
         return cell
     }
@@ -91,5 +94,18 @@ extension ListTripsViewController: ListTripsViewControllerProtocol {
     func reloadData() {
         tableView.reloadData()
     }
+    
+    func navigateToConfirmation(with trip: Trip) {
+        let confirmation = assembler.provideConfirmation(confirmationType: .passenger, tripInfo: trip)
+        navigationController?.present(confirmation, animated: true, completion: nil)
+        
+    }
 }
+
+extension ListTripsViewController: TripCellDelegate {
+    func tripRequested(sender: UIButton, tripId: String) {
+        presenter.tripRequested(id: tripId)
+    }
+}
+
 

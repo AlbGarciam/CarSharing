@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol TripCellDelegate: class {
+    func tripRequested(sender: UIButton, tripId: String)
+}
+
 class TripCell: UITableViewCell {
     
     static let reuseId: String = "TripCell"
+    
+    weak var delegate: TripCellDelegate?
+    
+    var tripId: String?
     
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
@@ -76,7 +84,9 @@ class TripCell: UITableViewCell {
     }
     
     @objc func didRequestTrip(_ sender: UIButton) {
-        
+        if let id = tripId {
+            delegate?.tripRequested(sender: sender, tripId: id)
+        }
     }
     
     override func awakeFromNib() {
