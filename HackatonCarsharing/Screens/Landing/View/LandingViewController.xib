@@ -42,7 +42,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redCar" translatesAutoresizingMaskIntoConstraints="NO" id="WME-h3-0eM">
-                    <rect key="frame" x="68" y="193.99999999999997" width="278" height="214.00000000000009"/>
+                    <rect key="frame" x="68" y="194" width="278" height="214"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="214" id="4wZ-Hj-GKk"/>
                         <constraint firstAttribute="width" constant="278" id="wd9-Yg-jqI"/>
@@ -57,7 +57,9 @@
                                 <constraint firstAttribute="height" constant="70" id="lBd-HS-ECP"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                            <state key="normal" title="Button" image="marker"/>
+                            <state key="normal" title="Button" image="marker">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="searchTripAction:" destination="-1" eventType="touchUpInside" id="on6-i7-sl5"/>
                             </connections>
@@ -68,7 +70,9 @@
                                 <constraint firstAttribute="height" constant="70" id="nx9-ow-hHx"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                            <state key="normal" title="Button" image="marker"/>
+                            <state key="normal" title="Button" image="speedCar">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="createTripAction:" destination="-1" eventType="touchUpInside" id="ity-PL-DnP"/>
                             </connections>
@@ -106,7 +110,8 @@
     <resources>
         <image name="greyBgVideo" width="360" height="740"/>
         <image name="logo" width="139" height="30"/>
-        <image name="marker" width="445" height="720"/>
+        <image name="marker" width="34" height="34"/>
         <image name="redCar" width="280" height="214"/>
+        <image name="speedCar" width="42" height="20"/>
     </resources>
 </document>

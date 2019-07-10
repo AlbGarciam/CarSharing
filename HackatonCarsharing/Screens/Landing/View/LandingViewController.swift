@@ -26,15 +26,15 @@ class LandingViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var btnSearchTrip: UIButton! {
+    @IBOutlet weak var btnSearchTrip: LandingButtonView! {
         didSet {
-            btnSearchTrip.setTitle("Busco un viaje", for: .normal)
+            btnSearchTrip.customLabel.text = "Busco un viaje"
         }
     }
     
-    @IBOutlet weak var btnCreateTrip: UIButton! {
+    @IBOutlet weak var btnCreateTrip: LandingButtonView! {
         didSet {
-            btnCreateTrip.setTitle("Compartir mi coche", for: .normal)
+            btnCreateTrip.customLabel.text = "Compartir mi coche"
         }
     }
     
