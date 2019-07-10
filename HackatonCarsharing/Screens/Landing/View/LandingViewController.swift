@@ -49,8 +49,8 @@ class LandingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        self.navigationController?.isNavigationBarHidden = true
-        self.title = "Prueba"
+        self.navigationController?.isNavigationBarHidden = true
+        self.title = ""
     }
     
     override func viewDidLoad() {

@@ -88,6 +88,13 @@ class CreateTicketViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
+        self.title = "Compartir mi coche"
+    }
+    
 }
 
 extension CreateTicketViewController: CreateTicketViewControllerProtocol {
