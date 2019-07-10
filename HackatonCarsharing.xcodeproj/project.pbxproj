@@ -29,6 +29,7 @@
 		4EC2F90222D5D31C00128222 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2F90122D5D31C00128222 /* CustomTextField.swift */; };
 		4EC2F90422D5E72C00128222 /* DropdownCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2F90322D5E72B00128222 /* DropdownCustomTextField.swift */; };
 		4EC2F90622D6005300128222 /* CreateTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2F90522D6005300128222 /* CreateTripsRequest.swift */; };
+		4EC2F90822D62AC700128222 /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2F90722D62AC700128222 /* UIViewController+Loader.swift */; };
 		4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5022D4AA3B005E8E89 /* Trip.swift */; };
 		4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */; };
 		4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */; };
@@ -96,6 +97,7 @@
 		4EC2F90122D5D31C00128222 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4EC2F90322D5E72B00128222 /* DropdownCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownCustomTextField.swift; sourceTree = "<group>"; };
 		4EC2F90522D6005300128222 /* CreateTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripsRequest.swift; sourceTree = "<group>"; };
+		4EC2F90722D62AC700128222 /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
 		4ECADF5022D4AA3B005E8E89 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TripFormatter.swift"; sourceTree = "<group>"; };
 		4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsRequest.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */,
 				268457AA22D5E08400A6D393 /* UINavigationController+NavBar.swift */,
 				268457AE22D6027E00A6D393 /* UIColor+Custom.swift */,
+				4EC2F90722D62AC700128222 /* UIViewController+Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				268457A822D4D52800A6D393 /* LandingButtonView.swift in Sources */,
 				268457B622D6202700A6D393 /* SpinnerView.swift in Sources */,
 				4ECADF5B22D4E40F005E8E89 /* Assembler.swift in Sources */,
+				4EC2F90822D62AC700128222 /* UIViewController+Loader.swift in Sources */,
 				268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */,
 				4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */,
 				4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */,

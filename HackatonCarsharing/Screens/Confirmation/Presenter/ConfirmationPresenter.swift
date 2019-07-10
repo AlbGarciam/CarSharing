@@ -117,6 +117,17 @@ extension ConfirmationPresenter : ConfirmationPresenterProtocol {
         }
     }
     
+    func didTapOnClose() {
+        switch confirmationType {
+        case .driver:
+            view?.navigationForDriver()
+        case .passenger:
+            view?.close(completion: nil)
+        case .error:
+            view?.close(completion: nil)
+        }
+    }
+    
     func clickToCallAction() {
         self.callToNumber()
     }

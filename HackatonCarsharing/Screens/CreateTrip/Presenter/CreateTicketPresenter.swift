@@ -64,7 +64,7 @@ extension CreateTicketPresenter: CreateTicketPresenterProtocol {
     
     func continueRequested() {
         guard let trip = fetchTripModel() else { return }
-        
+        view?.isLoading(true)
         CreateTripsRequest(with: trip)?.makeRequest {[weak self] (result) in
             switch result{
             case .success(_):
@@ -72,6 +72,7 @@ extension CreateTicketPresenter: CreateTicketPresenterProtocol {
             case .failure(_):
                 self?.view?.navigateToError()
             }
+            self?.view?.isLoading(false)
         }
     }
 }

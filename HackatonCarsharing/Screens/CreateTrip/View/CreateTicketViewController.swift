@@ -178,6 +178,8 @@ class CreateTicketViewController: UIViewController {
     @objc private func continueButtonTapped(_ sender: UIButton) {
         presenter.continueRequested()
 	}
+    
+    private var loader: SpinnerView?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -185,12 +187,11 @@ class CreateTicketViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.title = "Compartir mi coche"
     }
-    
 }
 
 extension CreateTicketViewController: CreateTicketViewControllerProtocol {
     func isLoading(_ loading: Bool) {
-        
+        loading ? showLoading() : hideLoading()
     }
     
     func navigateToConfirmation() {

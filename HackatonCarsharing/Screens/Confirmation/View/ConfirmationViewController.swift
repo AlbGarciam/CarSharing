@@ -12,6 +12,7 @@ protocol ConfirmationViewControllerProtocol: class {
     func navigationForDriver()
     func navigationForPassenger()
     func navigationForError()
+    func close(completion: (()->Void)?)
 }
 
 class ConfirmationViewController: UIViewController {
@@ -83,7 +84,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     @IBAction func didTappedOnCloseButton(_ sender: UIButton) {
-        close()
+        presenter.didTapOnClose()
     }
     
     //MARK: Functions
@@ -102,13 +103,13 @@ class ConfirmationViewController: UIViewController {
         descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: .vfBlack)
         actionButton.setTitle(buttonText, for: .normal)
     }
-    
-    private func close(completion: (()->Void)?  = nil) {
-        self.dismiss(animated: true, completion: completion)
-    }
 }
 
 extension ConfirmationViewController: ConfirmationViewControllerProtocol {
+    func close(completion: (()->Void)?  = nil) {
+        self.dismiss(animated: true, completion: completion)
+    }
+    
     func navigationForDriver() {
         let navigationController = (UIApplication.shared.delegate as? AppDelegate)?.navigationController
         close {
