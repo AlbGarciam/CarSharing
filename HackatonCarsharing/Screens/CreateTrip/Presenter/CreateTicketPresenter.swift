@@ -67,7 +67,7 @@ extension CreateTicketPresenter: CreateTicketPresenterProtocol {
         
         CreateTripsRequest(with: trip)?.makeRequest {[weak self] (result) in
             switch result{
-            case .success(let trip):
+            case .success(_):
                 self?.view?.navigateToConfirmation()
             case .failure(_):
                 self?.view?.navigateToError()
