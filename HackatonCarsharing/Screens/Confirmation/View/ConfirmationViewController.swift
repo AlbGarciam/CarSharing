@@ -50,21 +50,21 @@ class ConfirmationViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            titleLabel.font = UIFont(name: "Helvetica", size: 44)
+            titleLabel.font = UIFont(name: "HelveticaNeue", size: 44)
             titleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var subtitleLabel: UILabel!{
         didSet{
-            subtitleLabel.font = UIFont(name: "Helvetica-Bold", size: 18)
+            subtitleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
             subtitleLabel.textColor = .vfBlack
         }
     }
     
     @IBOutlet weak var descriptionLabel: UILabel!{
         didSet{
-            descriptionLabel.font = UIFont(name: "Helvetica", size: 16)
+            descriptionLabel.font = UIFont(name: "HelveticaNeue-Light", size: 16)
             descriptionLabel.textColor = .vfBlack
         }
     }
