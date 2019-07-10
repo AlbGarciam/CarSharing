@@ -28,6 +28,7 @@ class TripsListPresenter {
     
     private func requestTripsInfo() {
         let listRequest = GetTripsRequest()
+        view?.isLoading(true)
         listRequest.makeRequest { [weak self] result in
             switch result {
             case .success(let model):
@@ -36,11 +37,13 @@ class TripsListPresenter {
             case .failure(_):
                 self?.view?.navigateToError()
             }
+            self?.view?.isLoading(false)
         }
     }
     
     private func requestTripReservation(id: String) {
         let bookRequest = BookTripRequest(with: id)
+        view?.isLoading(true)
         bookRequest?.makeRequest { [weak self] result in
             switch result {
             case .success(let model):
@@ -59,6 +62,7 @@ class TripsListPresenter {
             case .failure(_):
                 self?.view?.navigateToError()
             }
+            self?.view?.isLoading(false)
         }
     }
 }

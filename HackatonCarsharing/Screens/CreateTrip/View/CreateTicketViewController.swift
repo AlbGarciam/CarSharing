@@ -179,8 +179,6 @@ class CreateTicketViewController: UIViewController {
         presenter.continueRequested()
 	}
     
-    private var loader: SpinnerView?
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

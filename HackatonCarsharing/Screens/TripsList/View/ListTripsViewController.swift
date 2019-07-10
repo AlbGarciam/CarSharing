@@ -12,6 +12,7 @@ protocol ListTripsViewControllerProtocol: class {
     func reloadData()
     func navigateToConfirmation(with trip: Trip)
     func navigateToError()
+    func isLoading(_ loading: Bool)
 }
 
 class ListTripsViewController: UIViewController {
@@ -35,10 +36,15 @@ class ListTripsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.getTripList()
-    self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         self.title = "Busco un viaje"
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.dropShadow()
+    }
+        
     //MARK: IB Outlets
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -60,7 +66,6 @@ class ListTripsViewController: UIViewController {
         tableView.layer.shadowOpacity = 1
         tableView.layer.shadowOffset = CGSize(width: 0, height: 2)
         tableView.layer.shadowRadius = 4
-        tableView.layer.shouldRasterize = true
     }
 }
 
@@ -106,6 +111,11 @@ extension ListTripsViewController: ListTripsViewControllerProtocol {
         let error = assembler.provideConfirmation(confirmationType: .error)
         navigationController?.present(error, animated: true, completion: nil)
     }
+    
+    func isLoading(_ loading: Bool) {
+        loading ? showLoading() : hideLoading()
+    }
+
 }
 
 extension ListTripsViewController: TripCellDelegate {
