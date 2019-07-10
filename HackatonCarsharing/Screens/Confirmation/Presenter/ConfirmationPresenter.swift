@@ -59,7 +59,10 @@ class ConfirmationPresenter {
         _titleText = "¡Oh yeah!"
         _subtitleText = "Ya tienes tu plaza reservada."
         if let trip = tripInfo {
-            _descriptionText = "Acabas de reservar plaza en el coche de <b>\(trip.name.capitalized)</b> para mañana a las \(trip.startTime) h en \(trip.origin)."
+            let date = DateFormatter.dateFormatter.date(from: tripInfo?.startTime ?? "") ?? Date()
+            let tripDate = DateFormatter.tripDate.string(from: date)
+            let tripTime = DateFormatter.tripTime.string(from: date)
+            _descriptionText = "Acabas de reservar plaza en el coche de <b>\(trip.name.capitalized)</b> para el día \(tripDate) a las \(tripTime) h en \(trip.origin)."
         }
         _buttonText = "Contacta con el conductor"
     }
