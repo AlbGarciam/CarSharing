@@ -28,6 +28,7 @@
 		4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */; };
 		4ECADF5B22D4E40F005E8E89 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5A22D4E40F005E8E89 /* Assembler.swift */; };
 		4ECADF5D22D4E457005E8E89 /* Assembler+ProvideLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */; };
+		B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */; };
 		4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6122D4E58A005E8E89 /* CreateTicketViewController.swift */; };
 		4ECADF6422D4E58A005E8E89 /* CreateTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */; };
 		4ECADF6622D4E5CA005E8E89 /* CreateTicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */; };
@@ -35,6 +36,13 @@
 		65083F17BED68DB4996A095A /* Pods_HackatonCarsharingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42021D1D3CCD19244965D592 /* Pods_HackatonCarsharingTests.framework */; };
 		C586D8AA2AC3683296316F09 /* Pods_HackatonCarsharingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1ACF5ACB32015D037156A /* Pods_HackatonCarsharingUITests.framework */; };
 		E3ADC3C6592E5C6A1E5DB7F4 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B511C9A5876A5698B4858 /* Pods_HackatonCarsharing.framework */; };
+		7DA36B1322D4D06F005A1BCE /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */; };
+		7DA36B1522D4D1B9005A1BCE /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */; };
+		7DA36B1722D4D1F3005A1BCE /* ConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */; };
+		7DA36B1922D5349D005A1BCE /* ConfirmationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1822D5349D005A1BCE /* ConfirmationPresenterProtocol.swift */; };
+		7DA36B1B22D53B0D005A1BCE /* Assembler+ProvideConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1A22D53B0D005A1BCE /* Assembler+ProvideConfirmation.swift */; };
+		7DA36B1E22D540CA005A1BCE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1D22D540CA005A1BCE /* String.swift */; };
+		B1E1BCF17BE9514AD4E4FA86 /* Pods_HackatonCarsharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F03D8D5295FFCF1B2383CD /* Pods_HackatonCarsharing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,11 @@
 		4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsRequest.swift; sourceTree = "<group>"; };
 		4ECADF5A22D4E40F005E8E89 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+ProvideLanding.swift"; sourceTree = "<group>"; };
+		515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
+		63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF46BC11395FF874F121540 /* Pods-HackatonCarsharingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingTests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingTests/Pods-HackatonCarsharingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F461CEF38C4C417ABFACB105 /* Pods-HackatonCarsharingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ECADF6122D4E58A005E8E89 /* CreateTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketViewController.swift; sourceTree = "<group>"; };
 		4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTicketViewController.xib; sourceTree = "<group>"; };
 		4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketPresenter.swift; sourceTree = "<group>"; };
@@ -95,6 +108,17 @@
 		91E1ACF5ACB32015D037156A /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8EA2C975D9914E9C5A8F34 /* Pods-HackatonCarsharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.release.xcconfig"; sourceTree = "<group>"; };
 		EC2DCBD0B477C48079E18135 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
+		515345CB3DC778B47EF47E87 /* Pods_HackatonCarsharingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D7EAA1E0BBBCFF2A663911 /* Pods-HackatonCarsharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharing.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharing/Pods-HackatonCarsharing.debug.xcconfig"; sourceTree = "<group>"; };
+		63BEFAD0810EE49E30AB14C0 /* Pods_HackatonCarsharingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCarsharingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationViewController.xib; sourceTree = "<group>"; };
+		7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPresenter.swift; sourceTree = "<group>"; };
+		7DA36B1822D5349D005A1BCE /* ConfirmationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPresenterProtocol.swift; sourceTree = "<group>"; };
+		7DA36B1A22D53B0D005A1BCE /* Assembler+ProvideConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+ProvideConfirmation.swift"; sourceTree = "<group>"; };
+		7DA36B1D22D540CA005A1BCE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CAF46BC11395FF874F121540 /* Pods-HackatonCarsharingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingTests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingTests/Pods-HackatonCarsharingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F461CEF38C4C417ABFACB105 /* Pods-HackatonCarsharingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4ECADF5E22D4E54D005E8E89 /* CreateTrip */,
+				7DA36B1122D4D052005A1BCE /* Confirmation */,
 				268457A022D4C7C600A6D393 /* Landing */,
 			);
 			path = Screens;
@@ -199,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC2F90022D5D19D00128222 /* UIComponents */,
+				7DA36B1C22D5407B005A1BCE /* Utilities */,
 				4ECADF5922D4E3FB005E8E89 /* Assembler */,
 				4ECADF5522D4B42C005E8E89 /* Requests */,
 				4ECADF5222D4AC5C005E8E89 /* Extensions */,
@@ -283,6 +309,7 @@
 				4ECADF5A22D4E40F005E8E89 /* Assembler.swift */,
 				4ECADF5C22D4E457005E8E89 /* Assembler+ProvideLanding.swift */,
 				4ECADF6722D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift */,
+				7DA36B1A22D53B0D005A1BCE /* Assembler+ProvideConfirmation.swift */,
 			);
 			path = Assembler;
 			sourceTree = "<group>";
@@ -321,6 +348,33 @@
 				91E1ACF5ACB32015D037156A /* Pods_HackatonCarsharingUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DA36B1122D4D052005A1BCE /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */,
+				7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */,
+				7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */,
+				7DA36B1822D5349D005A1BCE /* ConfirmationPresenterProtocol.swift */,
+			);
+			path = Confirmation;
+			sourceTree = "<group>";
+		};
+		7DA36B1C22D5407B005A1BCE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7DA36B1F22D540CF005A1BCE /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7DA36B1F22D540CF005A1BCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DA36B1D22D540CA005A1BCE /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +489,7 @@
 				4ECADF6422D4E58A005E8E89 /* CreateTicketViewController.xib in Resources */,
 				4E6E48A422D4A45200D3185F /* Assets.xcassets in Resources */,
 				268457A422D4C86300A6D393 /* LandingViewController.xib in Resources */,
+				7DA36B1322D4D06F005A1BCE /* ConfirmationViewController.xib in Resources */,
 				4E6E48A222D4A45100D3185F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,13 +619,18 @@
 				4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */,
 				268457AB22D5E08400A6D393 /* UINavigationController+NavBar.swift in Sources */,
 				4EC2F90422D5E72C00128222 /* DropdownCustomTextField.swift in Sources */,
+				7DA36B1B22D53B0D005A1BCE /* Assembler+ProvideConfirmation.swift in Sources */,
+				7DA36B1722D4D1F3005A1BCE /* ConfirmationPresenter.swift in Sources */,
 				4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */,
 				4ECADF5D22D4E457005E8E89 /* Assembler+ProvideLanding.swift in Sources */,
+				7DA36B1522D4D1B9005A1BCE /* ConfirmationViewController.swift in Sources */,
 				4E6E48D022D4A59200D3185F /* APIRequest.swift in Sources */,
 				4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */,
 				4ECADF6822D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift in Sources */,
 				4E6E48CE22D4A59200D3185F /* APIError.swift in Sources */,
 				4EC2F90222D5D31C00128222 /* CustomTextField.swift in Sources */,
+				7DA36B1E22D540CA005A1BCE /* String.swift in Sources */,
+				7DA36B1922D5349D005A1BCE /* ConfirmationPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
