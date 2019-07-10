@@ -16,6 +16,59 @@ class CreateTicketViewController: UIViewController {
 
     var presenter: CreateTicketPresenterProtocol!
     
+    @IBOutlet weak var titleFirstSectionLabel: UILabel! {
+        didSet {
+            titleFirstSectionLabel.text = "Cuéntanos sobre ti"
+        }
+    }
+    @IBOutlet weak var titleSecondSectionLabel: UILabel! {
+        didSet {
+            titleSecondSectionLabel.text = "Ahora sobre tu ruta hasta Vodafone"
+        }
+    }
+    @IBOutlet weak var contactNameTextField: CustomTextField! {
+        didSet {
+            contactNameTextField.setPlaceholder(text: "Nombre y apellido")
+        }
+    }
+    @IBOutlet weak var corporateEmailTextField: CustomTextField!{
+        didSet {
+            corporateEmailTextField.setPlaceholder(text: "Email corporativo")
+        }
+    }
+    @IBOutlet weak var contactNumberTextField: CustomTextField!{
+        didSet {
+            contactNumberTextField.setPlaceholder(text: "Teléfono")
+        }
+    }
+    @IBOutlet weak var startLocation: CustomTextField!{
+        didSet {
+            startLocation.setPlaceholder(text: "Punto de salida")
+        }
+    }
+    @IBOutlet weak var stopsTextField: CustomTextField!{
+        didSet {
+            stopsTextField.setPlaceholder(text: "Paradas intermedias")
+        }
+    }
+    @IBOutlet weak var startDate: CustomTextField!{
+        didSet {
+            startDate.setPlaceholder(text: "Fecha de salida")
+        }
+    }
+    @IBOutlet weak var startTimeTextField: CustomTextField!{
+        didSet {
+            startTimeTextField.setPlaceholder(text: "Hora de salida")
+        }
+    }
+    @IBOutlet weak var seatsTextField: CustomTextField!{
+        didSet {
+            seatsTextField.setPlaceholder(text: "Nº de plazas")
+        }
+    }
+    
+    @IBOutlet weak var continueButton: UIButton!
+    
     init() {
         super.init(nibName: nil, bundle: Bundle.init(for: type(of: self)))
     }
@@ -28,4 +81,29 @@ class CreateTicketViewController: UIViewController {
 
 extension CreateTicketViewController: CreateTicketViewControllerProtocol {
     
+}
+
+extension CreateTicketViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case contactNameTextField:
+            corporateEmailTextField.becomeFirstResponder()
+        case corporateEmailTextField:
+            contactNumberTextField.becomeFirstResponder()
+        case contactNumberTextField:
+            startLocation.becomeFirstResponder()
+        case startLocation:
+            stopsTextField.becomeFirstResponder()
+        case stopsTextField:
+            startDate.becomeFirstResponder()
+        case startDate:
+            startTimeTextField.becomeFirstResponder()
+        case startTimeTextField:
+            seatsTextField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+            continueButton.sendActions(for: .touchUpInside)
+        }
+        return false
+    }
 }

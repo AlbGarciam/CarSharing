@@ -21,6 +21,7 @@
 		4E6E48CE22D4A59200D3185F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48CB22D4A59200D3185F /* APIError.swift */; };
 		4E6E48CF22D4A59200D3185F /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48CC22D4A59200D3185F /* APISession.swift */; };
 		4E6E48D022D4A59200D3185F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E48CD22D4A59200D3185F /* APIRequest.swift */; };
+		4EC2F90222D5D31C00128222 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2F90122D5D31C00128222 /* CustomTextField.swift */; };
 		4ECADF5122D4AA3B005E8E89 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5022D4AA3B005E8E89 /* Trip.swift */; };
 		4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */; };
 		4ECADF5722D4B45A005E8E89 /* GetTripsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */; };
@@ -73,6 +74,7 @@
 		4E6E48CB22D4A59200D3185F /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4E6E48CC22D4A59200D3185F /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		4E6E48CD22D4A59200D3185F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		4EC2F90122D5D31C00128222 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4ECADF5022D4AA3B005E8E89 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		4ECADF5322D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TripFormatter.swift"; sourceTree = "<group>"; };
 		4ECADF5622D4B45A005E8E89 /* GetTripsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsRequest.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		4E6E489B22D4A45100D3185F /* HackatonCarsharing */ = {
 			isa = PBXGroup;
 			children = (
+				4EC2F90022D5D19D00128222 /* UIComponents */,
 				4ECADF5922D4E3FB005E8E89 /* Assembler */,
 				4ECADF5522D4B42C005E8E89 /* Requests */,
 				4ECADF5222D4AC5C005E8E89 /* Extensions */,
@@ -233,6 +236,14 @@
 				4E6E48CD22D4A59200D3185F /* APIRequest.swift */,
 			);
 			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		4EC2F90022D5D19D00128222 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2F90122D5D31C00128222 /* CustomTextField.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		4ECADF4F22D4AA24005E8E89 /* Domain */ = {
@@ -532,6 +543,7 @@
 				4ECADF5422D4AC7C005E8E89 /* DateFormatter+TripFormatter.swift in Sources */,
 				4ECADF6822D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift in Sources */,
 				4E6E48CE22D4A59200D3185F /* APIError.swift in Sources */,
+				4EC2F90222D5D31C00128222 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
