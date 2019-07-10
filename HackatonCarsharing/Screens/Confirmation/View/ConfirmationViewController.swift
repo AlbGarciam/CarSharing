@@ -11,6 +11,7 @@ import UIKit
 protocol ConfirmationViewControllerProtocol: class {
     func navigationForDriver()
     func navigationForPassenger()
+    func navigationForError()
 }
 
 class ConfirmationViewController: UIViewController {
@@ -109,8 +110,9 @@ class ConfirmationViewController: UIViewController {
 
 extension ConfirmationViewController: ConfirmationViewControllerProtocol {
     func navigationForDriver() {
+        let navigationController = (UIApplication.shared.delegate as? AppDelegate)?.navigationController
         close {
-            self.navigationController?.popToRootViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
@@ -118,5 +120,9 @@ extension ConfirmationViewController: ConfirmationViewControllerProtocol {
         close {
             self.presenter.clickToCallAction()
         }
+    }
+    
+    func navigationForError() {
+        close()
     }
 }

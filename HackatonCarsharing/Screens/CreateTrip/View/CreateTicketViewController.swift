@@ -18,6 +18,10 @@ protocol CreateTicketViewControllerProtocol : AnyObject {
     var startDate: Date? { get }
     var stops: String? { get }
     var isContinueEnabled: Bool { get set }
+    
+    func navigateToConfirmation()
+    func navigateToError()
+    func isLoading(_ loading: Bool)
 }
 
 class CreateTicketViewController: UIViewController {
@@ -185,6 +189,20 @@ class CreateTicketViewController: UIViewController {
 }
 
 extension CreateTicketViewController: CreateTicketViewControllerProtocol {
+    func isLoading(_ loading: Bool) {
+        
+    }
+    
+    func navigateToConfirmation() {
+        let overlay = assembler.provideConfirmation(confirmationType: .driver)
+        present(overlay, animated: true, completion: nil)
+    }
+    
+    func navigateToError() {
+        let overlay = assembler.provideConfirmation(confirmationType: .error)
+        present(overlay, animated: true, completion: nil)
+    }
+    
     var contactName: String? { return contactNameTextField.text }
     
     var contactNumber: String? { return contactNumberTextField.text }
