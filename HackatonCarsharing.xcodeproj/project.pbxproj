@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		268457AD22D5F5C200A6D393 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457AC22D5F5C200A6D393 /* CustomButton.swift */; };
 		268457AF22D6027E00A6D393 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457AE22D6027E00A6D393 /* UIColor+Custom.swift */; };
 		268457B222D619AD00A6D393 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457B122D619AD00A6D393 /* LandingPresenter.swift */; };
+		268457B622D6202700A6D393 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457B522D6202700A6D393 /* SpinnerView.swift */; };
 		4E6E489D22D4A45100D3185F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489C22D4A45100D3185F /* AppDelegate.swift */; };
 		4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E489E22D4A45100D3185F /* ViewController.swift */; };
 		4E6E48A222D4A45100D3185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E48A022D4A45100D3185F /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		268457AC22D5F5C200A6D393 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		268457AE22D6027E00A6D393 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		268457B122D619AD00A6D393 /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
+		268457B522D6202700A6D393 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		3C8401161D9CF04BB88AF8DF /* Pods-HackatonCarsharingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCarsharingUITests.release.xcconfig"; path = "Target Support Files/Pods-HackatonCarsharingUITests/Pods-HackatonCarsharingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E6E489922D4A45100D3185F /* HackatonCarsharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCarsharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6E489C22D4A45100D3185F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				4EC2F90322D5E72B00128222 /* DropdownCustomTextField.swift */,
 				4EC2F90122D5D31C00128222 /* CustomTextField.swift */,
 				268457AC22D5F5C200A6D393 /* CustomButton.swift */,
+				268457B522D6202700A6D393 /* SpinnerView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				4E6E489F22D4A45100D3185F /* ViewController.swift in Sources */,
 				4ECADF6622D4E5CA005E8E89 /* CreateTicketPresenter.swift in Sources */,
 				268457A822D4D52800A6D393 /* LandingButtonView.swift in Sources */,
+				268457B622D6202700A6D393 /* SpinnerView.swift in Sources */,
 				4ECADF5B22D4E40F005E8E89 /* Assembler.swift in Sources */,
 				268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */,
 				4ECADF6322D4E58A005E8E89 /* CreateTicketViewController.swift in Sources */,
