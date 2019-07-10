@@ -54,7 +54,7 @@
                             </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
-                                <action selector="didTappedOnActionButton:" destination="-1" eventType="touchUpInside" id="ApL-qI-Un0"/>
+                                <action selector="didTappedOnActionButton:" destination="-1" eventType="touchUpInside" id="wRP-82-vpV"/>
                             </connections>
                         </button>
                     </subviews>

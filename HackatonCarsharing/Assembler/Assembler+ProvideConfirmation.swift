@@ -10,8 +10,9 @@ import UIKit
 
 extension Assembler {
     func provideConfirmation(confirmationType: ConfirmationType, tripInfo: Trip? = nil) -> UIViewController {
-        let presenter = ConfirmationPresenter(confirmationType: confirmationType, tripInfo: tripInfo)
-        let controller = ConfirmationViewController(presenter: presenter)
+        let controller = ConfirmationViewController()
+        let presenter = ConfirmationPresenter(view: controller, confirmationType: confirmationType, tripInfo: tripInfo)
+        controller.configure(presenter: presenter)
         return controller
     }
 }

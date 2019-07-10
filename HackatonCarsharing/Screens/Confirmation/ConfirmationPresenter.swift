@@ -14,6 +14,9 @@ enum ConfirmationType {
 }
 
 class ConfirmationPresenter {
+    
+    weak var view: ConfirmationViewControllerProtocol?
+    
     private var confirmationType: ConfirmationType
     private var tripInfo: Trip?
     
@@ -23,7 +26,8 @@ class ConfirmationPresenter {
     private var _descriptionText: String = ""
     private var _buttonText: String = ""
     
-    init(confirmationType: ConfirmationType, tripInfo: Trip? = nil) {
+    init(view: ConfirmationViewControllerProtocol, confirmationType: ConfirmationType, tripInfo: Trip? = nil) {
+        self.view = view
         self.confirmationType = confirmationType
         self.tripInfo = tripInfo
         setUpInfo()
@@ -77,6 +81,15 @@ extension ConfirmationPresenter : ConfirmationPresenterProtocol {
     
     var buttonText: String {
         return _buttonText
+    }
+    
+    func didTappedOnActionButton() {
+        switch confirmationType {
+        case .driver:
+            view?.navigationForDriver()
+        case .passenger:
+            view?.navigationForPassenger()
+        }
     }
     
 }

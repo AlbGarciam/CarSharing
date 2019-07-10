@@ -8,19 +8,27 @@
 
 import UIKit
 
+protocol ConfirmationViewControllerProtocol: class {
+    func navigationForDriver()
+    func navigationForPassenger()
+}
+
 class ConfirmationViewController: UIViewController {
     
     //MARK: MVP
-    private let presenter: ConfirmationPresenterProtocol
+    private var presenter: ConfirmationPresenterProtocol!
 
     //MARK: Initializers
-    init(presenter: ConfirmationPresenterProtocol) {
-        self.presenter = presenter
+    init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(presenter: ConfirmationPresenterProtocol) {
+        self.presenter = presenter
     }
     
     //MARK: Properties
@@ -44,21 +52,21 @@ class ConfirmationViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!{
         didSet{
-            titleLabel.font = UIFont(name: "HelveticaNeue", size: 44)
+            titleLabel.font = UIFont(name: "Helvetica", size: 44)
             titleLabel.textColor = black
         }
     }
     
     @IBOutlet weak var subtitleLabel: UILabel!{
         didSet{
-            subtitleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
+            subtitleLabel.font = UIFont(name: "Helvetica-Bold", size: 18)
             subtitleLabel.textColor = black
         }
     }
     
     @IBOutlet weak var descriptionLabel: UILabel!{
         didSet{
-            descriptionLabel.font = UIFont(name: "HelveticaNeue", size: 16)
+            descriptionLabel.font = UIFont(name: "Helvetica", size: 16)
             descriptionLabel.textColor = black
         }
     }
@@ -66,7 +74,7 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!{
         didSet{
             actionButton.setTitleColor(.white, for: .normal)
-            actionButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 18)
+            actionButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
             actionButton.backgroundColor = red
             actionButton.layer.cornerRadius = 6
             actionButton.layer.masksToBounds = true
@@ -81,7 +89,7 @@ class ConfirmationViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func didTappedOnActionButton(_ sender: UIButton) {
-        
+        presenter.didTappedOnActionButton()
     }
     
     @IBAction func didTappedOnCloseButton(_ sender: UIButton) {
@@ -101,11 +109,23 @@ class ConfirmationViewController: UIViewController {
         imageView.image = UIImage(named: imageName)
         titleLabel.text = titleText
         subtitleLabel.text = subtitleText
-        descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "HelveticaNeue", alignment: .center, color: black)
+        descriptionLabel.attributedText = descriptionText.stringFromHTML(fontSize: 16, fontName: "Helvetica", alignment: .center, color: black)
         actionButton.setTitle(buttonText, for: .normal)
     }
     
     private func close(completion: (()->Void)?  = nil) {
         self.dismiss(animated: false, completion: completion)
+    }
+}
+
+extension ConfirmationViewController: ConfirmationViewControllerProtocol {
+    func navigationForDriver() {
+        close {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func navigationForPassenger() {
+        close()
     }
 }
