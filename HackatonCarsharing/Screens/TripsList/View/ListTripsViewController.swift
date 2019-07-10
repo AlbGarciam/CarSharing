@@ -11,6 +11,7 @@ import UIKit
 protocol ListTripsViewControllerProtocol: class {
     func reloadData()
     func navigateToConfirmation(with trip: Trip)
+    func navigateToError()
 }
 
 class ListTripsViewController: UIViewController {
