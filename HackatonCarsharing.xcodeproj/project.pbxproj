@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -225,9 +225,9 @@
 				4E6E48CA22D4A59200D3185F /* APIRequest */,
 				268457A622D4D1B900A6D393 /* Screens */,
 				4E6E489C22D4A45100D3185F /* AppDelegate.swift */,
+				4E6E48A322D4A45200D3185F /* Assets.xcassets */,
 				4E6E489E22D4A45100D3185F /* ViewController.swift */,
 				4E6E48A022D4A45100D3185F /* Main.storyboard */,
-				4E6E48A322D4A45200D3185F /* Assets.xcassets */,
 				4E6E48A522D4A45200D3185F /* LaunchScreen.storyboard */,
 				4E6E48A822D4A45200D3185F /* Info.plist */,
 			);

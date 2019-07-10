@@ -65,11 +65,11 @@ class ConfirmationPresenter {
     }
     
     private func setUpError() {
-        _imageName = "confirmation_success_passenger"
+        _imageName = "ko_image"
         _titleText = "¡Ups!"
         _subtitleText = "Parece que algo ha salido mal."
         _descriptionText = ""
-        _buttonText = "Contacta con el conductor"
+        _buttonText = "Volver a intentar"
     }
     
     private func callToNumber() {

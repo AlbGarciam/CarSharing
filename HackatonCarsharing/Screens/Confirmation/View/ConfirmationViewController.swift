@@ -104,7 +104,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     private func close(completion: (()->Void)?  = nil) {
-        self.dismiss(animated: false, completion: completion)
+        self.dismiss(animated: true, completion: completion)
     }
 }
 
