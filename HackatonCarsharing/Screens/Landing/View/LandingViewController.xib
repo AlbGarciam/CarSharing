@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="HackatonCarsharing" customModuleProvider="target">
             <connections>
+                <outlet property="btnCreateTrip" destination="IYD-h9-2XO" id="IJj-gk-V77"/>
+                <outlet property="btnSearchTrip" destination="y9m-pN-2s5" id="6U4-D1-xAc"/>
+                <outlet property="imgLogo" destination="wcF-jw-bfY" id="6Rf-gr-jlv"/>
+                <outlet property="imgPicture" destination="WME-h3-0eM" id="kJf-qR-OiH"/>
+                <outlet property="lblTitle" destination="t8g-mS-nlc" id="Tvz-8r-sHH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +25,86 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sY-Hd-u3e">
-                    <rect key="frame" x="184" y="312" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="createTripAction:" destination="-1" eventType="touchUpInside" id="REy-F1-u6k"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdX-6p-eyf">
-                    <rect key="frame" x="184" y="461" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="searchTripAction:" destination="-1" eventType="touchUpInside" id="FdN-wC-jVq"/>
-                    </connections>
-                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyBgVideo" translatesAutoresizingMaskIntoConstraints="NO" id="Jqq-BX-p1J">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-jw-bfY">
+                    <rect key="frame" x="137.5" y="60" width="139" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="139" id="LFD-l5-92U"/>
+                        <constraint firstAttribute="height" constant="35" id="wzr-rp-Xe0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8g-mS-nlc">
+                    <rect key="frame" x="16" y="122" width="382" height="33.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="WME-h3-0eM">
+                    <rect key="frame" x="68" y="195.5" width="278" height="214"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="214" id="4wZ-Hj-GKk"/>
+                        <constraint firstAttribute="width" constant="278" id="wd9-Yg-jqI"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XjZ-6s-h79">
+                    <rect key="frame" x="16" y="445.5" width="382" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-pN-2s5" customClass="LandingButtonView" customModule="HackatonCarsharing" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="lBd-HS-ECP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Button" image="marker"/>
+                            <connections>
+                                <action selector="searchTripAction:" destination="-1" eventType="touchUpInside" id="on6-i7-sl5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-h9-2XO" customClass="LandingButtonView" customModule="HackatonCarsharing" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="90" width="382" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="nx9-ow-hHx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Button" image="marker"/>
+                            <connections>
+                                <action selector="createTripAction:" destination="-1" eventType="touchUpInside" id="ity-PL-DnP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IYD-h9-2XO" secondAttribute="trailing" id="0B9-n7-Wp4"/>
+                        <constraint firstItem="y9m-pN-2s5" firstAttribute="leading" secondItem="XjZ-6s-h79" secondAttribute="leading" id="FZz-wi-MLt"/>
+                        <constraint firstItem="IYD-h9-2XO" firstAttribute="leading" secondItem="XjZ-6s-h79" secondAttribute="leading" id="YVB-8u-vBY"/>
+                        <constraint firstAttribute="trailing" secondItem="y9m-pN-2s5" secondAttribute="trailing" id="gYc-ww-fwR"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="4sY-Hd-u3e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EjT-Pn-iWN"/>
-                <constraint firstItem="FdX-6p-eyf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Iex-h3-8w5"/>
-                <constraint firstItem="FdX-6p-eyf" firstAttribute="top" secondItem="4sY-Hd-u3e" secondAttribute="bottom" constant="119" id="Ptc-IQ-nUE"/>
-                <constraint firstItem="4sY-Hd-u3e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="268" id="eFG-J9-saK"/>
+                <constraint firstItem="WME-h3-0eM" firstAttribute="top" secondItem="t8g-mS-nlc" secondAttribute="bottom" constant="40" id="1S4-CX-Kk1"/>
+                <constraint firstItem="wcF-jw-bfY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="98D-ui-J6y"/>
+                <constraint firstAttribute="trailing" secondItem="XjZ-6s-h79" secondAttribute="trailing" constant="16" id="Ras-a2-B7W"/>
+                <constraint firstItem="Jqq-BX-p1J" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VtK-Dd-7wS"/>
+                <constraint firstItem="Jqq-BX-p1J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bYx-F5-4Bw"/>
+                <constraint firstItem="XjZ-6s-h79" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dlM-MO-oki"/>
+                <constraint firstItem="XjZ-6s-h79" firstAttribute="top" secondItem="WME-h3-0eM" secondAttribute="bottom" constant="36" id="fD0-GB-Ow3"/>
+                <constraint firstItem="Jqq-BX-p1J" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="k1D-vn-1eD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t8g-mS-nlc" secondAttribute="trailing" constant="16" id="mIp-hx-vou"/>
+                <constraint firstItem="wcF-jw-bfY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="tUl-Nn-OR4"/>
+                <constraint firstItem="Jqq-BX-p1J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uCg-Vc-nDo"/>
+                <constraint firstItem="t8g-mS-nlc" firstAttribute="top" secondItem="wcF-jw-bfY" secondAttribute="bottom" constant="27" id="x9o-Ny-KYR"/>
+                <constraint firstItem="WME-h3-0eM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xHC-mT-lcG"/>
+                <constraint firstItem="t8g-mS-nlc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yZ4-sA-SXC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
     </objects>
+    <resources>
+        <image name="greyBgVideo" width="360" height="740"/>
+        <image name="marker" width="445" height="720"/>
+    </resources>
 </document>
