@@ -49,10 +49,13 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XjZ-6s-h79">
-                    <rect key="frame" x="16" y="445.5" width="382" height="200"/>
+                    <rect key="frame" x="16" y="445.5" width="382" height="160"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-pN-2s5" customClass="LandingButtonView" customModule="HackatonCarsharing" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="lBd-HS-ECP"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                             <state key="normal" title="Button" image="marker"/>
                             <connections>
@@ -60,7 +63,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-h9-2XO" customClass="LandingButtonView" customModule="HackatonCarsharing" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="110" width="382" height="90"/>
+                            <rect key="frame" x="0.0" y="90" width="382" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="nx9-ow-hHx"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                             <state key="normal" title="Button" image="marker"/>
                             <connections>
@@ -69,20 +75,22 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="K0f-kp-Jc2"/>
+                        <constraint firstAttribute="trailing" secondItem="IYD-h9-2XO" secondAttribute="trailing" id="0B9-n7-Wp4"/>
+                        <constraint firstItem="y9m-pN-2s5" firstAttribute="leading" secondItem="XjZ-6s-h79" secondAttribute="leading" id="FZz-wi-MLt"/>
+                        <constraint firstItem="IYD-h9-2XO" firstAttribute="leading" secondItem="XjZ-6s-h79" secondAttribute="leading" id="YVB-8u-vBY"/>
+                        <constraint firstAttribute="trailing" secondItem="y9m-pN-2s5" secondAttribute="trailing" id="gYc-ww-fwR"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WME-h3-0eM" firstAttribute="top" secondItem="t8g-mS-nlc" secondAttribute="bottom" constant="40" id="1S4-CX-Kk1"/>
-                <constraint firstAttribute="trailing" secondItem="XjZ-6s-h79" secondAttribute="trailing" constant="16" id="7DS-Uo-8Ro"/>
                 <constraint firstItem="wcF-jw-bfY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="98D-ui-J6y"/>
-                <constraint firstItem="XjZ-6s-h79" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9UJ-lU-1fA"/>
-                <constraint firstItem="y9m-pN-2s5" firstAttribute="leading" secondItem="t8g-mS-nlc" secondAttribute="trailing" constant="-382" id="Gfw-vs-SJW"/>
-                <constraint firstItem="XjZ-6s-h79" firstAttribute="top" secondItem="WME-h3-0eM" secondAttribute="bottom" constant="36" id="PE4-uX-bE2"/>
+                <constraint firstAttribute="trailing" secondItem="XjZ-6s-h79" secondAttribute="trailing" constant="16" id="Ras-a2-B7W"/>
                 <constraint firstItem="Jqq-BX-p1J" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VtK-Dd-7wS"/>
                 <constraint firstItem="Jqq-BX-p1J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bYx-F5-4Bw"/>
+                <constraint firstItem="XjZ-6s-h79" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dlM-MO-oki"/>
+                <constraint firstItem="XjZ-6s-h79" firstAttribute="top" secondItem="WME-h3-0eM" secondAttribute="bottom" constant="36" id="fD0-GB-Ow3"/>
                 <constraint firstItem="Jqq-BX-p1J" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="k1D-vn-1eD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t8g-mS-nlc" secondAttribute="trailing" constant="16" id="mIp-hx-vou"/>
                 <constraint firstItem="wcF-jw-bfY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="tUl-Nn-OR4"/>

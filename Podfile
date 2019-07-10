@@ -6,6 +6,7 @@ target 'HackatonCarsharing' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'IQKeyboardManager'
 
   target 'HackatonCarsharingTests' do
     inherit! :search_paths
