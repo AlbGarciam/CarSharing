@@ -44,6 +44,16 @@ class TripsListPresenter {
         bookRequest?.makeRequest { [weak self] result in
             switch result {
             case .success(let model):
+                var trips = self?.tripsInfo?.trips
+                trips = trips?.map({ (trip) -> Trip in
+                    if trip.id == model.id {
+                        return model
+                    }
+                    return trip
+                })
+                if let trips = trips {
+                    self?.tripsInfo?.setTrips(trips)
+                }
                 self?.view?.reloadData()
                 self?.view?.navigateToConfirmation(with: model)
             case .failure(_):

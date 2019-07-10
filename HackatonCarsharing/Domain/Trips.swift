@@ -10,9 +10,13 @@ import Foundation
 
 struct Trips {
     
-    private(set) var trips: [Trip]?
+    var trips: [Trip]?
     
     init(trips: [Trip]) {
+        self.trips = trips
+    }
+    
+    mutating func setTrips(_ trips: [Trip]) {
         self.trips = trips
     }
 }

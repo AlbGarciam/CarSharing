@@ -61,26 +61,27 @@ class TripCell: UITableViewCell {
     @IBOutlet weak var infoTripStackView: UIStackView!
     
     func configureAdditionalInfo(time: String, seats: Int) {
-        if infoTripStackView.subviews.count == 0 {
-            let timeLabel = AttributeView()
-            timeLabel.attributeTitle.text = "Hora:"
-            timeLabel.attributeValue.text = "\(time)"
-            infoTripStackView.addArrangedSubview(timeLabel)
-            let seatsLabel = AttributeView()
-            seatsLabel.attributeTitle.text = "Plazas:"
-            seatsLabel.attributeValue.text = "\(seats)"
-            infoTripStackView.addArrangedSubview(seatsLabel)
-            let button = UIButton()
-            button.setTitle("Reservar", for: .normal)
-            button.setTitleColor(.white, for: .normal)
-            button.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
-            button.backgroundColor = .vfRed
-            button.layer.cornerRadius = 6
-            button.layer.masksToBounds = true
-            button.addTarget(self, action: #selector(didRequestTrip(_:)), for: .touchUpInside)
-            infoTripStackView.addArrangedSubview(button)
-            layoutIfNeeded()
+        infoTripStackView.subviews.forEach { (subview) in
+            subview.removeFromSuperview()
         }
+        let timeLabel = AttributeView()
+        timeLabel.attributeTitle.text = "Hora:"
+        timeLabel.attributeValue.text = "\(time)"
+        infoTripStackView.addArrangedSubview(timeLabel)
+        let seatsLabel = AttributeView()
+        seatsLabel.attributeTitle.text = "Plazas:"
+        seatsLabel.attributeValue.text = "\(seats)"
+        infoTripStackView.addArrangedSubview(seatsLabel)
+        let button = UIButton()
+        button.setTitle("Reservar", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        button.backgroundColor = .vfRed
+        button.layer.cornerRadius = 6
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(didRequestTrip(_:)), for: .touchUpInside)
+        infoTripStackView.addArrangedSubview(button)
+        layoutIfNeeded()
     }
     
     @objc func didRequestTrip(_ sender: UIButton) {

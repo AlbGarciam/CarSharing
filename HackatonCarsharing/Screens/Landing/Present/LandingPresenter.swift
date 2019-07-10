@@ -30,5 +30,7 @@ extension LandingPresenter: LandingPresenterProtocol {
     }
     
     func searchTripAction() {
+        let list = assembler.provideTripsList()
+        self.view?.getViewController().navigationController?.pushViewController(list, animated: true)
     }
 }

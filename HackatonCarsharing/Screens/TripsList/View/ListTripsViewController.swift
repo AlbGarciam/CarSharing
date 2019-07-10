@@ -93,6 +93,7 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ListTripsViewController: ListTripsViewControllerProtocol {
     func reloadData() {
+        tableView.layoutIfNeeded()
         tableView.reloadData()
     }
     
