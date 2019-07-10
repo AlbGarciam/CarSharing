@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ConfirmationType {
     case driver
@@ -59,6 +60,17 @@ class ConfirmationPresenter {
         }
         _buttonText = "Contacta con el conductor"
     }
+    
+    private func callToNumber() {
+
+        if let trip = tripInfo, let url = URL(string: "tel://\(trip.contact)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
 }
 
 extension ConfirmationPresenter : ConfirmationPresenterProtocol {
@@ -92,4 +104,7 @@ extension ConfirmationPresenter : ConfirmationPresenterProtocol {
         }
     }
     
+    func clickToCallAction() {
+        self.callToNumber()
+    }
 }

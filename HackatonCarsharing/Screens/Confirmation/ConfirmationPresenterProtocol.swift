@@ -15,4 +15,5 @@ protocol ConfirmationPresenterProtocol : class {
     var descriptionText: String { get }
     var buttonText: String { get }
     func didTappedOnActionButton()
+    func clickToCallAction()
 }

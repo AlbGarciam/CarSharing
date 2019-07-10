@@ -126,6 +126,8 @@ extension ConfirmationViewController: ConfirmationViewControllerProtocol {
     }
     
     func navigationForPassenger() {
-        close()
+        close {
+            self.presenter.clickToCallAction()
+        }
     }
 }
