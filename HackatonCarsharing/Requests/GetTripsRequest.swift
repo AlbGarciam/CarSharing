@@ -10,10 +10,10 @@ import Foundation
 
 struct GetTripsRequest: APIRequest {
     
-    typealias Response =  [Trip]
+    typealias Response =  Trips
     
     var method: Methods { return .GET }
     
-    var path: String { return "/posts" }
+    var path: String { return "/trips" }
     
 }
