@@ -60,14 +60,14 @@ class CreateTicketViewController: UIViewController {
     }
     @IBOutlet weak var startLocation: CustomTextField!{
         didSet {
-            startLocation.setPlaceholder(text: "Punto de salida")
+            startLocation.setPlaceholder(text: "Especifica el punto de salida")
             startLocation.delegate = self
             startLocation.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         }
     }
     @IBOutlet weak var stopsTextField: CustomTextField!{
         didSet {
-            stopsTextField.setPlaceholder(text: "Paradas intermedias")
+            stopsTextField.setPlaceholder(text: "Especifica las paradas intermedias")
             stopsTextField.delegate = self
             stopsTextField.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         }
@@ -95,7 +95,11 @@ class CreateTicketViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton! {
+        didSet {
+            continueButton.setTitle("Publicar viaje", for: .normal)
+        }
+    }
     let picker = UIDatePicker()
     
     private var startDateValue: Date?
