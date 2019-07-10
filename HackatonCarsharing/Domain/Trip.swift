@@ -10,7 +10,7 @@ import Foundation
 
 struct Trip {
 
-    let id: Int
+    let id: String
     let origin: String
     let destination: String
     let contact: String
@@ -21,7 +21,7 @@ struct Trip {
     let startTime: String
     let stops: String?
 
-    init(id: Int = 0, origin: String, destination: String = "Vodafone Plaza", contact: String,
+    init(id: String = "", origin: String, destination: String = "Vodafone Plaza", contact: String,
          name: String, email: String, totalSeats: Int,
          availableSeats: Int, startTime: String, stops: String?) {
         self.id = id
@@ -40,7 +40,7 @@ struct Trip {
 
 extension Trip: Codable {
     fileprivate enum CodingKeys: String, CodingKey {
-        case id
+        case id = "_id"
         case origin
         case destination
         case contact
@@ -54,7 +54,7 @@ extension Trip: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        let id = try container.decode(Int.self, forKey: .id)
+        let id = try container.decode(String.self, forKey: .id)
         let origin = try container.decode(String.self, forKey: .origin)
         let destination = try container.decode(String.self, forKey: .destination)
         let contact = try container.decode(String.self, forKey: .contact)

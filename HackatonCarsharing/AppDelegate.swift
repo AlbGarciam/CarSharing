@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let landingVC = assembler.provideLanding()
         let rootViewController = UINavigationController(rootViewController: landingVC)
+        rootViewController.appearance()
         window?.rootViewController = rootViewController
         
         return true

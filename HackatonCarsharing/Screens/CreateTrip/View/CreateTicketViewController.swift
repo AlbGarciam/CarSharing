@@ -173,6 +173,13 @@ class CreateTicketViewController: UIViewController {
     
     @objc private func continueButtonTapped(_ sender: UIButton) {
         presenter.continueRequested()
+	}
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
+        self.title = "Compartir mi coche"
     }
     
 }
