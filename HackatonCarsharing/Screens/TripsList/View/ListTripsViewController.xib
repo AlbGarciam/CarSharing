@@ -33,7 +33,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="7hL-Cg-wLV" secondAttribute="bottom" id="2Be-n5-DGe"/>
                 <constraint firstItem="tQv-de-pfV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6ab-yd-RXy"/>
-                <constraint firstAttribute="trailing" secondItem="7hL-Cg-wLV" secondAttribute="trailing" id="Rxb-yN-Cbf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7hL-Cg-wLV" secondAttribute="trailing" id="Rxb-yN-Cbf"/>
                 <constraint firstAttribute="bottom" secondItem="tQv-de-pfV" secondAttribute="bottom" id="Wyd-J3-W0u"/>
                 <constraint firstItem="7hL-Cg-wLV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kmI-5U-0pb"/>
                 <constraint firstAttribute="trailing" secondItem="tQv-de-pfV" secondAttribute="trailing" id="oK0-cI-Bua"/>
