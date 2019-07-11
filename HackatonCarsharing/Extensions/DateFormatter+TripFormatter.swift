@@ -31,7 +31,7 @@ extension DateFormatter {
         let tripTime = DateFormatter()
         tripTime.dateFormat = "HH:mm"
         tripTime.calendar = Calendar(identifier: .iso8601)
-        tripTime.timeZone = TimeZone(secondsFromGMT: 0)
+        tripTime.timeZone = TimeZone(secondsFromGMT: 2*60*60)
         tripTime.locale = Locale(identifier: "en_US_POSIX")
         return tripTime
     }()
