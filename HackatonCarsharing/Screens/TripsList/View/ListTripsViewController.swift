@@ -80,9 +80,9 @@ extension ListTripsViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = cell as? TripCell, let model = presenter.model(for: indexPath.row) {
             cell.tripId = model.id
             cell.titleLabel.text = model.name
-            let date = DateFormatter.dateFormatter.date(from: model.startTime)
-            let tripDate = DateFormatter.tripDate.string(from: date!)
-            let tripTime = DateFormatter.tripTime.string(from: date!)
+            let date = DateFormatter.dateFormatter.date(from: model.startTime) ?? Date()
+            let tripDate = DateFormatter.tripDate.string(from: date)
+            let tripTime = DateFormatter.tripTime.string(from: date)
             cell.dateLabel.text = tripDate
             cell.originLabel.text = model.origin
             if let stop = model.stops {
