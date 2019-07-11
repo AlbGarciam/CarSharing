@@ -18,28 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nA9-6h-drc">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyBgVideo" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-0j-wrX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="I7K-KQ-SpR">
+                                <rect key="frame" x="77.5" y="387.5" width="259" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Dq2-Rt-8Mc"/>
-                                    <constraint firstAttribute="width" constant="240" id="Hdf-xs-FmZ"/>
+                                    <constraint firstAttribute="width" constant="259" id="KIK-Gp-ExX"/>
+                                    <constraint firstAttribute="height" constant="65" id="jKO-X1-zdn"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nA9-6h-drc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="q06-aH-M1d"/>
-                            <constraint firstItem="nA9-6h-drc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s5Q-43-eMk"/>
+                            <constraint firstItem="I7K-KQ-SpR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-28" id="Can-87-nG4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oBg-0j-wrX" secondAttribute="bottom" constant="-34" id="PGR-FR-VOn"/>
+                            <constraint firstItem="oBg-0j-wrX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="VeP-Hq-nHb"/>
+                            <constraint firstItem="I7K-KQ-SpR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eih-KG-37y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oBg-0j-wrX" secondAttribute="trailing" id="lBi-LB-oFC"/>
+                            <constraint firstItem="oBg-0j-wrX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tti-kV-hK6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="139" height="30"/>
+        <image name="greyBgVideo" width="360" height="740"/>
+        <image name="logoSplash" width="259" height="55"/>
     </resources>
 </document>
