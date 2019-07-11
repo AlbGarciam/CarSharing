@@ -86,15 +86,30 @@ class ConfirmationPresenter {
         }
     }
     
+    private func generateURL(number: String, text: String) -> URL? {
+        guard var url = URL(string: "//wa.me") else {
+            fatalError("Impossible to generate url")
+        }
+        url.appendPathComponent("34\(number)")
+        // Add components
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            fatalError("Impossible to generate components from \(url)")
+        }
+        components.scheme = "https"
+        components.queryItems = [URLQueryItem(name: "text", value: text)]
+        return components.url
+    }
+    
     private func clickToChat() {
-        if let trip = tripInfo {
-            let text = "!Hola%20\(trip.name.capitalized)!%20Quiero%20compartir%20viaje%20contigo%20"
-            if let url = URL(string: "https://wa.me/34\(trip.contact)?text=\(text)"), UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10, *) {
-                    UIApplication.shared.open(url)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+        guard let trip = tripInfo else { return }
+        let text = "!Hola \(trip.name.capitalized)! Quiero compartir viaje contigo"
+        guard let url = generateURL(number: trip.contact, text: text) else { return }
+        let canOpen = UIApplication.shared.canOpenURL(url)
+        if canOpen {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
             }
         }
     }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2362D0F538DEAACDCC4D0D12 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		2362D0F538DEAACDCC4D0D12 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		268457A322D4C86300A6D393 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457A122D4C86300A6D393 /* LandingViewController.swift */; };
 		268457A422D4C86300A6D393 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268457A222D4C86300A6D393 /* LandingViewController.xib */; };
 		268457A822D4D52800A6D393 /* LandingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268457A722D4D52800A6D393 /* LandingButtonView.swift */; };
@@ -39,7 +39,7 @@
 		4ECADF6422D4E58A005E8E89 /* CreateTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECADF6222D4E58A005E8E89 /* CreateTicketViewController.xib */; };
 		4ECADF6622D4E5CA005E8E89 /* CreateTicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6522D4E5CA005E8E89 /* CreateTicketPresenter.swift */; };
 		4ECADF6822D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF6722D4E65F005E8E89 /* Assembler+ProvideCreateTicket.swift */; };
-		68E3464A6D331EC6D6FBFEF8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		68E3464A6D331EC6D6FBFEF8 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		7DA36B1322D4D06F005A1BCE /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA36B1222D4D06F005A1BCE /* ConfirmationViewController.xib */; };
 		7DA36B1522D4D1B9005A1BCE /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1422D4D1B9005A1BCE /* ConfirmationViewController.swift */; };
 		7DA36B1722D4D1F3005A1BCE /* ConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA36B1622D4D1F3005A1BCE /* ConfirmationPresenter.swift */; };
@@ -148,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2362D0F538DEAACDCC4D0D12 /* BuildFile in Frameworks */,
+				2362D0F538DEAACDCC4D0D12 /* (null) in Frameworks */,
 				E763CA8ADC42D73C2654B770 /* Pods_HackatonCarsharing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E3464A6D331EC6D6FBFEF8 /* BuildFile in Frameworks */,
+				68E3464A6D331EC6D6FBFEF8 /* (null) in Frameworks */,
 				9881DCBFF1EA4464BD5E4147 /* Pods_HackatonCarsharingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,6 +906,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZAS7CST4MJ;
 				INFOPLIST_FILE = HackatonCarsharing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -925,6 +926,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZAS7CST4MJ;
 				INFOPLIST_FILE = HackatonCarsharing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
