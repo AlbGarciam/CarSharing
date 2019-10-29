@@ -7,17 +7,30 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static let endpoint:String = ""
+    static let endpoint:String = "http://carsharingvf.herokuapp.com/api"
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let landingVC = assembler.provideLanding()
+        navigationController = UINavigationController(rootViewController: landingVC)
+        
+        navigationController?.appearance()
+        window?.rootViewController = navigationController
+        
         return true
     }
 
